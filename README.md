@@ -5,10 +5,11 @@ phyloLINER is a web tool for species identification of metabarcoding DNA sequenc
 ---
 
 ## Analysis site   
+viento - fast   
 [http://157.82.133.212/phyloliner/](http://157.82.133.212/phyloliner/)   
 (from 19 Oct. 2023)   
 
-sakura (from 21 Jan. 2024) - fast   
+sakura (from 21 Jan. 2024)   
 [http://133.167.86.72/phyloliner/](http://133.167.86.72/phyloliner/).
 
 ---
