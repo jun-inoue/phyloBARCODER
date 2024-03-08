@@ -6,7 +6,8 @@ phyloLINER is a web tool for species identification of metabarcoding DNA sequenc
 
 ## Analysis site   
 viento - fast   
-[https://orthoscope.jp/phyloliner/](https://orthoscope.jp/phyloliner/)   
+[https://orthoscope.jp/phyloliner/](https://orthoscope.jp/phyloliner/)      
+
 https://orthoscope.jp/phyloscope/ (from 19 Oct. 2023)
 (from 19 Oct. 2023)   
 
