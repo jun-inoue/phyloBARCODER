@@ -15,8 +15,7 @@ osaka
 
 ---
 ## Instruction　　　
-[https://fish-evol.org/phyloscope_instruction/index.html](https://fish-evol.org/phyloscope_instruction/index.html)
-
+[https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)
 
 ---
 ## Citation
