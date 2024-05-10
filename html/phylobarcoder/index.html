@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>phyloBARCODER</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="phylogenetic classification">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="phylobarcoder100.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<!-- <h1 id="logo"><a href="index.html"><img src="images/logo2.png" alt="phyloBARCODER"></a></h1> -->
+<aside id="mainimg"><img src="images/whaleShark.png" alt=""></aside>
+</header>
+
+<nav id="menubar">
+<ul>
+<li><a href="index_seqExtraction.html">Sequence Extraction</a></li>
+<li><a href="https://github.com/jun-inoue/phyloBARCODER" target="_blank">GitHub</a></li>
+<li><a href="http://www.fish-evol.org/phylobarcoder_instruction/index.html" target="_blank">Instruction</a></li>
+<li><a href="https://github.com/jun-inoue/Species_tree" target="_blank">Species Tree</a></li>
+</ul>
+</nav>
+
+<div id="contents">
+
+<section id="new">
+<!-- <h2>Species Identification</h2> -->
+
+<form id="my_form">
+<!-- <table align="center" width="850" border="0" cellpadding="0" cellspacing="10" bordercolor="#FFFFFF" bgcolor="#87CEEB"> -->
+
+<tr>
+  <td><table width="100%" border="0">
+  <td><button type="submit" class="btn-primary">Species Identification: SUBMIT</button></td>
+  </table></td>
+</tr>
+
+<tr>
+  <td><table width="100%" border="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td width="10%"><strong class="titleL">Status</strong></td>
+        <td width="90%" colspan="2" align="left"><div id="result">Ready.</div></td>
+      </tr>
+    </tbody>
+  </table></td>
+</tr>
+
+<tr>
+  <input type="hidden" name="mode_select" value="mode_A"></td>
+  <!-- <td><table width="100%" border="0">
+  <td width="15%"><select name="mode_select" style="WIDTH: 100%; HEIGHT: 30px; color: black; font-size: 18px; ">
+    <option value="mode_A" selected>mode (A)</option>
+    <option value="mode_B">mode (B)</option>
+  </select></td>
+  </table></td>
+  -->
+</tr>
+
+
+<tr>
+      <td>&ensp;</td>
+</tr>
+<!-- <tr>
+      <td width="100%"><hr size="2" noshade></td>
+</tr>
+-->
+
+<tr>
+  <td><table width="100%" border="0">
+    <tbody>
+
+      <tr>
+        <td width="25%" align="left" valign="top"><b>(1) Anonymous sequences</b>
+        <br>&ensp;&ensp;&ensp;Examples: <br>
+        &ensp;&ensp;&ensp;<a href="examples/fish_KS1815-B06-0m_C00-300m.fasta" target="_blank">Fish 12S</a> (&asymp; 4 secs)<br>
+        &ensp;&ensp;&ensp;<a href="examples/corals_point1-deep_zotu.fa" target="_blank">Corals 12S</a> (&asymp; 5 secs)<br>
+        &ensp;&ensp;&ensp;<a href="examples/copepods_mtCOI_all_align.fas" target="_blank">Copepods COI</a> (&asymp; 40 secs)<br>
+        </td>
+        <td width="75%" align="center"><textarea name="text_area_anonSeq" rows="15"></textarea></td>
+      </tr>
+
+
+      <tr>
+        <td valign="top">&ensp;</td>
+        <td align="center" valign="top">or upload file &ensp;
+            <input type="file" name="input_file_anonSeqs" method="post" style="WIDTH: 400px; HEIGHT: 30px; color: black; font-size: 16px; ">
+        </td>
+      </tr>
+
+    </tbody>
+  </table></td>
+</tr>
+
+
+
+<tr>
+  <td><table width="100%" border="0">
+    <tbody>
+
+      <tr>
+        <td width="55%" align="left" valign="top">&ensp;&ensp;&ensp;Number of queries</td>
+        <td width="45%" valign="top"><select name="num_queries" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="NoBlastSearch">No blast search</option>
+          <option value="onlyFirstSeq" selected>Only 1st anonymous sequence</option>
+          <option value="First2seqs">First 2 anonymous sequences</option>
+          <option value="First3seqs">First 3 anonymous sequences</option>
+          <option value="First4seqs">First 4 anonymous sequences</option>
+          <option value="First5seqs">First 5 anonymous sequences</option>
+          <option value="First6seqs">First 6 anonymous sequences</option>
+          <option value="First7seqs">First 7 anonymous sequences</option>
+          <option value="First8seqs">First 8 anonymous sequences</option>
+          <option value="First9seqs">First 9 anonymous sequences</option>
+          <option value="First10seqs">First 10 anonymous sequences</option>
+          <!-- <option value="allSeq">all</option> -->
+        </select></td>
+      </tr>
+
+
+      <tr>
+        <td colspan=2>&ensp;</td>
+      </tr>
+
+
+
+      <!-- #### Database1 ####-->
+      <tr>
+        <td align="left" valign="bottom"><b>(2) Databases </b></td>
+        <td>&ensp;</td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom"><b>&ensp;&ensp;&ensp;Anonymous DB</b> (uploaded sequences)</td>
+        <td>&ensp;</td>
+      </tr>
+
+      <tr>
+        <td align="left" valign="bottom">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/" target="_blank">-num_alignments</a>: 
+          # of hits for each query sequence</td>
+        <td valign="top"><select name="blastHits_anonDB" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="NotSelected">0 hits (not used)</option>
+          <option value="1">1 hits</option>
+          <option value="2">2 hits</option>
+          <option value="3">3 hits</option>
+          <option value="4">4 hits</option>
+          <option value="5">5 hits</option>
+          <option value="10">10 hits</option>
+          <option value="15">15 hits</option>
+          <option value="20" selected>20 hits</option>
+          <option value="30">30 hits</option>
+          <option value="40">40 hits</option>
+          <option value="50">50 hits</option>
+          <option value="100">100 hits</option>
+          <!-- <option value="all">Add all uploaded sequences</option> -->
+        </select></td>
+      </tr>
+      <tr>
+        <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/" target="_blank">-evalue</a>: E-value threshold for reported sequences</td>
+        <td align="left" valign="top"><select name="blastEvalue_anonseq" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="1e-5">1e-5: narrow</option>
+          <option value="1e-4">1e-4</option>
+          <option value="1e-3" selected>1e-3</option>
+          <option value="1e-2">1e-2</option>
+          <option value="1e-1">1e-1</option>
+          <option value="1">1: wide</option>
+        </select></td>
+      </tr>
+
+  <!-- 
+  <tr>
+    <td><a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.blastn_application_options/" target="_blank">-word_size</a>: Length of initial exact match</td>
+    <td align="left" valign="top">
+      <select name="word_size_yourseq" style="WIDTH: 50%; HEIGHT: 30px; color: black; font-size: 18px; ">
+      <option value="6">6 bp slow</option>
+      <option value="7">7 bp</option>
+      <option value="8">8 bp</option>
+      <option value="9">9 bp</option>
+      <option value="10">10 bp</option>
+      <option value="11" selected>11 bp</option>
+      <option value="12">12 bp</option>
+      <option value="13">13 bp</option>
+      <option value="14">14 bp</option>
+      <option value="15">15 bp</option>
+      <option value="15">15 bp</option>
+      <option value="17">17 bp</option>
+      <option value="18">18 bp</option>
+      <option value="19">19 bp</option>
+      <option value="20">20 bp</option>
+      <option value="21">21 bp</option>
+      <option value="22">22 bp</option>
+      <option value="23">23 bp</option>
+      <option value="24">24 bp</option>
+      <option value="25">25 bp</option>
+      <option value="26">26 bp</option>
+      <option value="27">27 bp</option>
+      <option value="28">28 bp first</option>
+      </select>
+    </td>
+  </tr>
+  -->
+
+      
+      <!-- #### Database2 #### -->
+      <tr>
+        <td align="left" valign="bottom" colspan=2>&ensp;&ensp;&ensp;<b>Pre-installed DB</b></td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="http://www.reference-midori.info/download.php" target="_blank">MIDORI2</a>: (mtDNA 15 gene sequences)</td>
+        <td valign="top"><select name="release_MIDORI2DB" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="GenBank259" selected>GenBank259 [Dec. 2023]</option>
+          <option value="GenBank254">GenBank254 [Feb. 2023]</option>  <!-- selected -->
+        </select></td>
+      </tr>
+ 
+       <tr>
+        <td align="left" valign="bottom" colspan=2>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/" target="_blank">-num_alignments</a>:</td>
+      </tr>
+
+      <tr>
+        <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Species DB</b> (MIDORI2, longest): 742,253 sequences</td>
+        <td valign="top"><select name="blastHits_speciesDB" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="NotSelected">0</option>
+          <option value="1">1 hits</option>
+          <option value="2">2 hits</option>
+          <option value="3">3 hits</option>
+          <option value="4">4 hits</option>
+          <option value="5">5 hits</option> <!-- selected -->
+          <option value="10">10 hits</option>
+          <option value="15">15 hits</option>
+          <option value="20" selected>20 hits</option>
+          <option value="30">30 hits</option>
+          <option value="40">40 hits</option>
+          <option value="50">50 hits</option>
+          <option value="100">100 hits</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Haplotype DB</b> (MIDORI2, uniq): 3,185,489 sequences</td>
+        <td valign="top"><select name="blastHits_haplotypeDB" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="NotSelected">0 hits</option>
+          <option value="1">1 hits</option>
+          <option value="2">2 hits</option>
+          <option value="3">3 hits</option>
+          <option value="4">4 hits</option>
+          <option value="5">5 hits</option>
+          <option value="10" selected>10 hits</option> <!-- selected -->
+          <option value="15">15 hits</option>
+          <option value="20">20 hits</option>
+          <option value="30">30 hits</option>
+          <option value="40">40 hits</option>
+          <option value="50">50 hits</option>
+          <option value="100">100 hits</option>
+          <option value="300">300 hits</option>
+        </select></td>
+      </tr>
+
+
+
+      <tr>
+        <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/" target="_blank">-evalue</a>:</td>
+        <td align="left" valign="top"><select name="blastEvalue_midori" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="1e-5">1e-5: narrow</option>
+          <option value="1e-4">1e-4</option>
+          <option value="1e-3" selected>1e-3</option>
+          <option value="1e-2">1e-2</option>
+          <option value="1e-1">1e-1</option>
+          <option value="1">1: wide</option>
+        </select></td>
+      </tr>
+
+  <!-- 
+  <tr>
+    <td><a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.blastn_application_options/" target="_blank">-word_size</a>: Length of initial exact match</td>
+    <td align="left" valign="top">
+      <select name="wordSize_installedDB" style="WIDTH: 50%; HEIGHT: 30px; color: black; font-size: 18px; ">
+      <option value="6">6 bp slow</option>
+      <option value="7">7 bp</option>
+      <option value="8">8 bp</option>
+      <option value="9">9 bp</option>
+      <option value="10">10 bp</option>
+      <option value="11" selected>11 bp</option>
+      <option value="12">12 bp</option>
+      <option value="13">13 bp</option>
+      <option value="14">14 bp</option>
+      <option value="15">15 bp</option>
+      <option value="15">15 bp</option>
+      <option value="17">17 bp</option>
+      <option value="18">18 bp</option>
+      <option value="19">19 bp</option>
+      <option value="20">20 bp</option>
+      <option value="21">21 bp</option>
+      <option value="22">22 bp</option>
+      <option value="23">23 bp</option>
+      <option value="24">24 bp</option>
+      <option value="25">25 bp</option>
+      <option value="26">26 bp</option>
+      <option value="27">27 bp</option>
+      <option value="28">28 bp first</option>
+      </select>
+    </td>
+  </tr>
+  -->
+
+ <!-- #### Database3 ####-->
+      <tr>
+        <td align="left" valign="bottom">&ensp;&ensp;&ensp;<b>User DB</b></td>
+        <td>&ensp;</td>
+      </tr>
+
+      <tr>
+        <td align="left" valign="top">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Example: <a href="examples/MiFish_DB_231016_mod.fas" target="_blank">MiFish_DB</a>
+        </td>
+        <td valign="top">
+            <input type="file" name="input_file_yourrefseqs" method="post" style="WIDTH: 100%; HEIGHT: 30px; color: black; font-size: 16px; ">
+        </td>
+      </tr>
+
+
+      <tr>
+        <td align="left" valign="bottom">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/" target="_blank">-num_alignments</a>:</td>
+        <td valign="top"><select name="blastHits_yourRefDB" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="NotSelected">0</option>
+          <option value="1">1 hits</option>
+          <option value="2">2 hits</option>
+          <option value="3">3 hits</option>
+          <option value="4">4 hits</option>
+          <option value="5">5 hits</option>
+          <option value="10" selected>10 hits</option>
+          <option value="15">15 hits</option>
+          <option value="20">20 hits</option>
+          <option value="30">30 hits</option>
+          <option value="40">40 hits</option>
+          <option value="50">50 hits</option>
+          <option value="100">100 hits</option>
+          <!-- <option value="all">Add all uploaded sequences</option> -->
+        </select></td>
+      </tr>
+      <tr>
+        <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.options_common_to_all_blast/" target="_blank">-evalue</a>:</td>
+        <td align="left" valign="top"><select name="blastEvalue_yourRefDB" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="1e-5">1e-5: narrow</option>
+          <option value="1e-4">1e-4</option>
+          <option value="1e-3" selected>1e-3</option>
+          <option value="1e-2">1e-2</option>
+          <option value="1e-1">1e-1</option>
+          <option value="1">1: wide</option>
+        </select></td>
+      </tr>
+
+
+  <!-- 
+  <tr>
+    <td><a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.blastn_application_options/" target="_blank">-word_size</a>: Length of initial exact match</td>
+    <td align="left" valign="top">
+      <select name="word_size_yourseq" style="WIDTH: 50%; HEIGHT: 30px; color: black; font-size: 18px; ">
+      <option value="6">6 bp slow</option>
+      <option value="7">7 bp</option>
+      <option value="8">8 bp</option>
+      <option value="9">9 bp</option>
+      <option value="10">10 bp</option>
+      <option value="11" selected>11 bp</option>
+      <option value="12">12 bp</option>
+      <option value="13">13 bp</option>
+      <option value="14">14 bp</option>
+      <option value="15">15 bp</option>
+      <option value="15">15 bp</option>
+      <option value="17">17 bp</option>
+      <option value="18">18 bp</option>
+      <option value="19">19 bp</option>
+      <option value="20">20 bp</option>
+      <option value="21">21 bp</option>
+      <option value="22">22 bp</option>
+      <option value="23">23 bp</option>
+      <option value="24">24 bp</option>
+      <option value="25">25 bp</option>
+      <option value="26">26 bp</option>
+      <option value="27">27 bp</option>
+      <option value="28">28 bp first</option>
+      </select>
+    </td>
+  </tr>
+  -->
+
+
+  <!-- (3) Measure of Confidence -->
+  <tr>
+    <td colspan=2>&ensp;</td>
+  </tr>
+
+   <tr>
+     <td colspan=2><strong>(3) Measure of Confidence</strong></td>
+   </tr>
+
+   <tr>
+     <td>&ensp;&ensp;&ensp;<a href="https://www.pnas.org/doi/10.1073/pnas.93.23.13429" target="_blank">Bootstrap analysis</a>:  Branch confidences in a phylogenetic tree</td>
+     <td align="left" valign="top"><select name="num_bootstrap" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+       <option value="0" >No</option>
+       <option value="100" selected>100 times</option>
+     </select></td>
+   </tr>
+
+
+  <!-- (4) Primer aligment check -->
+  <tr>
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan=2><b>(4) Primer Region</b></td>
+  </tr>
+
+    <tr>
+      <!-- blastdbcmd option: -->
+      <td>&ensp;&ensp;&ensp; <a href="https://www.ncbi.nlm.nih.gov/books/NBK279684/table/appendices.T.blastdbcmd_application_opti/" target="_blank">-range</a>: 5'/3' flanking sequence lengths</td>
+      <td>
+        <select name="flankingSequence" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="0" checked="checked">0 bp</option>
+          <option value="10">10 bp</option>
+          <option value="20">20 bp</option>
+          <option value="30">30 bp</option>
+          <option value="50">50 bp</option>
+          <option value="100">100 bp</option>
+        </select>
+      </td>
+    </tr>
+      
+    </tbody>
+  </table></td>
+</tr>
+
+
+
+<!--
+<tr>
+      <td width="99%"><hr size="3" noshade></td>
+</tr>
+-->
+
+
+
+</table>
+</form><!-- my_form table End -->
+
+
+</section>
+
+
+
+</div>
+<!--/contents-->
+
+<tr>
+      <td>&ensp;</td>
+</tr>
+
+<footer>
+<small>jun.inoueATaori.u-tokyo.ac.jp | 11 May 2024 updated</small>
+<small><br>Copyright&copy; <a href="index.html">phyloBARCODER</a> All Rights Reserved.</small>
+<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+</div>
+<!--/container-->
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+BLASTN 2.7.1+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: MIDORI2_UNIQ_NUC_GB259_15genes_RAW.fasta
+           3,375,571 sequences; 2,447,734,135 total letters
+
+
+
+Query= SAMP1_OTU_006_B06-0m
+
+Length=173
+
+
+>SRRNA.AB102724.1.41317 AB102724.1.70.1031   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+japonicus_13676
+Length=962
+
+ Score = 313 bits (346),  Expect = 2e-83
+ Identities = 173/173 (100%), Gaps = 0/173 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  253  CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  312
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  313  AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  372
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  373  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  425
+
+
+>SRRNA.OR482445.1.41316 OR482445.1.70.1031   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+japonicus_13676
+Length=962
+
+ Score = 313 bits (346),  Expect = 2e-83
+ Identities = 173/173 (100%), Gaps = 0/173 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  253  CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  312
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  313  AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  372
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  373  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  425
+
+
+>SRRNA.MT410945.1.41315 MT410945.1.70.1031   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+japonicus_13676
+Length=962
+
+ Score = 313 bits (346),  Expect = 2e-83
+ Identities = 173/173 (100%), Gaps = 0/173 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  253  CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  312
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  313  AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  372
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  373  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  425
+
+
+>SRRNA.LC669541.1.41314 LC669541.1.<1.901   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+japonicus_13676
+Length=901
+
+ Score = 313 bits (346),  Expect = 2e-83
+ Identities = 173/173 (100%), Gaps = 0/173 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  192  CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  251
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  252  AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  311
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  312  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  364
+
+
+>SRRNA.OK501307.1.41310 OK501307.1.11123.12084   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+colias_338315
+Length=962
+
+ Score = 313 bits (346),  Expect = 2e-83
+ Identities = 173/173 (100%), Gaps = 0/173 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  253  CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  312
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  313  AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  372
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  373  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  425
+
+
+>SRRNA.AB102725.1.41301 AB102725.1.70.1031   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+australasicus_29150
+Length=962
+
+ Score = 313 bits (346),  Expect = 2e-83
+ Identities = 173/173 (100%), Gaps = 0/173 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  253  CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  312
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  313  AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  372
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  373  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  425
+
+
+>SRRNA.AB488406.1.41309 AB488406.1.70.1031   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+colias_338315
+Length=962
+
+ Score = 307 bits (340),  Expect = 7e-82
+ Identities = 172/173 (99%), Gaps = 0/173 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            |||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||
+Sbjct  253  CACCGCGGTTATACGATAGGCCCAAGTTGACAGAACCCGGCGTAAAGCGTGGTTAGGGAA  312
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  313  AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  372
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  373  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  425
+
+
+>SRRNA.OQ846046.1.41318 OQ846046.1.<1.>169   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+japonicus_13676
+Length=169
+
+ Score = 306 bits (338),  Expect = 2e-81
+ Identities = 169/169 (100%), Gaps = 0/169 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+
+
+>SRRNA.LC049697.1.41303 LC049697.1.<1.>169   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+australasicus_29150
+Length=169
+
+ Score = 306 bits (338),  Expect = 2e-81
+ Identities = 169/169 (100%), Gaps = 0/169 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+
+
+>SRRNA.MT497781.1.41312 MT497781.1.<1.>184   root_1;norank_cellular_organisms_131567;superkingdom_Eukaryota_2759;clade_Opisthokonta_33154;kingdom_Metazoa_33208;clade_Eumetazoa_6072;clade_Bilateria_33213;clade_Deuterostomia_33511;phylum_Chordata_7711;subphylum_Craniata_89593;clade_Vertebrata_7742;clade_Gnathostomata_7776;clade_Teleostomi_117570;clade_Euteleostomi_117571;superclass_Actinopterygii_7898;class_Actinopteri_186623;subclass_Neopterygii_41665;infraclass_Teleostei_32443;clade_Osteoglossocephalai_1489341;norank_Clupeocephala_186625;cohort_Euteleosteomorpha_1489388;clade_Neoteleostei_123365;clade_Eurypterygia_123366;clade_Ctenosquamata_123367;clade_Acanthomorphata_123368;clade_Euacanthomorphacea_123369;clade_Percomorphaceae_1489872;clade_Pelagiaria_1489885;order_Scombriformes_1489894;family_Scombridae_8224;subfamily_Scombrinae_186745;tribe_Scombrini_186746;genus_Scomber_13675;species_Scomber 
+colias_338315
+Length=184
+
+ Score = 302 bits (334),  Expect = 3e-80
+ Identities = 167/167 (100%), Gaps = 0/167 (0%)
+ Strand=Plus/Plus
+
+Query  7    GGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAAAACTCA  66
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    GGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAAAACTCA  60
+
+Query  67   AAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCCCTTCCA  126
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  61   AAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCCCTTCCA  120
+
+Query  127  CGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  173
+            |||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  121  CGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACACAAA  167
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 335544781715
+
+
+  Database: MIDORI2_UNIQ_NUC_GB259_15genes_RAW.fasta
+    Posted date:  Jan 12, 2024  10:49 AM
+  Number of letters in database: 2,447,734,135
+  Number of sequences in database:  3,375,571
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2

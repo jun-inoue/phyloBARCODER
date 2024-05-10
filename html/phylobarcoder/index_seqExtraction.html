@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>phyloBARCODER</title>
+<style>
+    input{
+        WIDTH: 70%;
+        border-radius: 5px;
+    }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="phylogenetic classification">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="phylobarcoder100.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<!-- <h1 id="logo"><a href="index.html"><img src="images/logo2.png" alt="phyloBARCODER"></a></h1> -->
+<aside id="mainimg"><img src="images/whaleShark.png" alt=""></aside>
+</header>
+
+<nav id="menubar">
+<ul>
+<li><a href="index.html">Species Identification</a></li>
+<li><a href="https://github.com/jun-inoue/phyloBARCODER" target="_blank">GitHub</a></li>
+<li><a href="http://www.fish-evol.org/phyloscope_instruction/index.html" target="_blank">Instruction</a></li>
+<li><a href="https://github.com/jun-inoue/Species_tree" target="_blank">Species Tree</a></li>
+</ul>
+</nav>
+
+<div id="contents">
+
+<section id="new">
+<!-- <h2>Species Identification</h2> -->
+
+<form id="my_form">
+<!-- <table align="center" width="850" border="0" cellpadding="0" cellspacing="10" bordercolor="#FFFFFF" bgcolor="#87CEEB"> -->
+
+<tr>
+  <td><table width="100%" border="0">
+  <td><button type="submit" class="btn-primary">Sequence Extraction: SUBMIT</button></td>
+  </table></td>
+</tr>
+
+<tr>
+  <td><table width="100%" border="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td width="2%">&ensp;</td>
+        <td width="10%"><strong class="titleL">Status</strong></td>
+        <td width="98%" colspan="2" align="left"><div id="result">Ready.</div></td>
+      </tr>
+      <tr>
+        <td colspan="3">&ensp;</td>
+      </tr>
+    </tbody>
+  </table></td>
+</tr>
+
+<tr>
+  <input type="hidden" name="mode_select" value="mode_B"></td>
+</tr>
+
+<tr>
+  <td><table width="100%" border="0">
+    <tbody>
+      <tr>
+        <td>&ensp;</td>
+        <td width="100%" colspan="4"><strong class="titleL">(1) Keywords</strong></td>
+      </tr>
+      <tr>
+        <td width="2%">&ensp;</td>
+        <td width="2%">&ensp;</td>
+        <td width="20%" align="center">Pre-installed DB</td>
+        <td width="20%" align="center">Gene&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+        <td width="56%" align="center">
+        Classification
+        </td>
+      </tr>
+    
+      <tr>
+        <td>&ensp;</td>
+        <td>&ensp;</td>
+        <td valign="top">
+          <select name="database_modeB" style="WIDTH: 100%; HEIGHT: 30px; color: black; font-size: 18px; ">
+            <option value="Long_MIDORI" selected>Species</option>
+            <option value="Unique_MIDORI">Haplotype</option>
+          </select>
+        </td>
+
+        <td valign="top"><select name="gene_modeB" style="WIDTH: 100%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="A6">ATP6</option>
+          <option value="A8">ATP8</option>
+          <option value="CO1">CO1</option>
+          <option value="CO2">CO2</option>
+          <option value="CO3">CO3</option>
+          <option value="Cytb">Cytb</option>
+          <option value="ND1">ND1</option>
+          <option value="ND2">ND2</option>
+          <option value="ND3">ND3</option>
+          <option value="ND4L">ND4L</option>
+          <option value="ND4">ND4</option>
+          <option value="ND5">ND5</option>
+          <option value="ND6">ND6</option>
+          <option value="srRNA" selected>12S (srRNA)</option>
+          <option value="lrRNA">16S (lrRNA)</option>
+        </select></td>
+
+      <td valign = "top" align="center">
+	      <!-- <textarea name="text_area_keyword_modeB" rows="1" cols="30%" placeholder="Homo sapiens or Salmoniformes" style="WIDTH: 70%; HEIGHT: 30px; color: black; font-size: 18px; "></textarea> -->
+	      <input type="text" name="text_area_keyword_modeB" placeholder="Homo sapiens or Salmoniformes">
+      </td>
+      </tr>
+
+      <tr>
+        <td>&ensp;</td>
+            <td width="100%" colspan="4"><strong class="titleL">(2) Database</strong></td>
+      </tr>
+      <tr>
+        <td>&ensp;</td>
+        <td>&ensp;</td>
+        <td valign="top" colspan="2"><select name="release_MIDORI2DB" style="WIDTH: 100%; HEIGHT: 30px; color: black; font-size: 18px; ">
+          <option value="GenBank259">MIDORI2 GenBank259 [Dec. 2023]</option>
+          <option value="GenBank254" selected>MIDORI2 GenBank254 [Feb. 2023]</option>  <!-- selected -->
+        </select>
+        </td>
+      </tr>
+
+    </tbody>
+  </table></td>
+</tr>
+
+
+
+</table>
+</form><!-- my_form table End -->
+</section>
+
+
+
+</div>
+<!--/contents-->
+
+<footer>
+<small>jun.inoueATaori.u-tokyo.ac.jp</small>
+<small><br>Copyright&copy; <a href="index.html">phyloBARCODER</a> All Rights Reserved.</small>
+<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+</div>
+<!--/container-->
+
+</body>
+</html>
