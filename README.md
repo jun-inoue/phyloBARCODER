@@ -18,6 +18,13 @@ osaka
 [https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)
 
 ---
+## Installation　　　
+If users install phyloBARCODER on a web server, download Source code from Releases and set files as follows:
+- install R and library ape.
+- put downloaded html and cgi-bin files in at /var/www/.
+- put dowlonaded dependencies (Rscript,blastn,blastdbcmd,makeblastdb,mafft, and trimal) at /cgi-bin/PHYLOBARCODERscripts
+
+---
 ## Citation
 Inoue J. et al. 
 phyloLINER: An automatic web tool that identifies eukaryote metabarcode sequences phylogenetically using custom reference databases. submitted.   
