@@ -23,6 +23,7 @@ If users install phyloBARCODER on your own web server, download Source code from
 - install R and package, [ape](https://github.com/emmanuelparadis/ape?tab=readme-ov-file).
 - save downloaded html and cgi-bin directories in /var/www/.
 - save dowlonaded dependencies (Rscript, BLASTN, BLASTDBCMD, MAKEBLASTDB, MAFFT, and TRIMAL) at /cgi-bin/PHYLOBARCODERscripts.   
+
 Those scripts were confirmed to run on the Linux operating system with an APache HTTP Server Server.   
 
 ---
