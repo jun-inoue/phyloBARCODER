@@ -29,7 +29,7 @@ Those scripts were confirmed to run on the Linux operating system with an Apache
 ---
 ## Citation
 Inoue J. et al. 
-phyloLINER: An automatic web tool that identifies eukaryote metabarcode sequences phylogenetically using custom reference databases. submitted.   
+phyloBARCODER: An web tool for phylogenetic classification of eukaryote metabarcodes using custom reference databases. submitted.   
 
 ---
 ## Contact 
