@@ -19,10 +19,11 @@ osaka
 
 ---
 ## Installation　　　
-If users install phyloBARCODER on a web server, download Source code from Releases and set files as follows:
-- install R and library ape.
-- put downloaded html and cgi-bin files in at /var/www/.
+If users install phyloBARCODER on your own web server, download Source code from Releases and set up the server as follows:
+- install R and package, [ape](https://github.com/emmanuelparadis/ape?tab=readme-ov-file).
+- save downloaded html and cgi-bin directories in /var/www/ of your sever.
 - put dowlonaded dependencies (Rscript,blastn,blastdbcmd,makeblastdb,mafft, and trimal) at /cgi-bin/PHYLOBARCODERscripts
+Those scripts were confirmed to run on the Linux operating system with an APache HTTP Server Server.   
 
 ---
 ## Citation
