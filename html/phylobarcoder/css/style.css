@@ -125,15 +125,17 @@ header {
 	height:50px;
     color: white; 
 	background-color: #224acf; 
-	font-size: 22px;
+	/* font-size: 22px; */
 	border-radius: 10px;	/*角を丸くする指定。この１行を削除すれば角丸がなくなります。*/
 }
 
 #contents textarea {
 	width:80%;
     align: center;
-	height:300px;
+	height:150px;
 	border-radius: 10px;	/*角を丸くする指定。この１行を削除すれば角丸がなくなります。*/
+    font-family: monospace;
+    font-size: 12px;
 }
 
 
@@ -299,7 +301,7 @@ body {
     background:#6495ED;
     color:#fff;
     border:none;
-    font-size:20px;
+    font-size:30px;
     border-radius:5px;
     box-shadow:3px 3px 3px #aaa;
     transition:all 0.3s;

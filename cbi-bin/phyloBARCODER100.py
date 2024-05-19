@@ -54,28 +54,19 @@ bottom_html = '''
 def retrieave_databaseVariables(release_MIDORI2DB):
     #print("release_MIDORI2DB", release_MIDORI2DB, "<br>")
     #exit()
-    if "ik1-319-19791.vs.sakura.ne.jp" in EMAIL_SUBJECT_PREFX or "ik1-335-27790.vs.sakura.ne.jp" in EMAIL_SUBJECT_PREFX:
+    if "os3-373-19568.vs.sakura.ne.jp" in EMAIL_SUBJECT_PREFX:
         rscriptTMP = "Rscript"
-        ### GB238 >Database
-        #database_address = "/data/dbfe/database_phyloBARCODER/GB238_MIDORI/"
-        #database_species = "/data/dbfe/database_phyloBARCODER/GB238_MIDORI/MIDORI_LONGEST_GB238_15genes_RAW.fasta"
-        #database_haplotype = "/data/dbfe/database_phyloBARCODER/GB238_MIDORI/MIDORI_UNIQ_GB238_15genes_RAW.fasta"
-        #### GB254 >Database
-        database_address = "/data/dbfe/database_phyloBARCODER/GB254_MIDORI/"
-        database_species = "/data/dbfe/database_phyloBARCODER/GB254_MIDORI/MIDORI2_LONGEST_NUC_GB254_15genes_RAW.fasta"
-        database_haplotype = "/data/dbfe/database_phyloBARCODER/GB254_MIDORI/MIDORI2_UNIQ_NUC_GB254_15genes_RAW1.fasta"
-    elif "rrcs-172-254-99" in EMAIL_SUBJECT_PREFX or "inouejunnoMacBook-Pro.local" in EMAIL_SUBJECT_PREFX:
-        database_genome = "/dbb/database_phyloBARCODER/sequence_CnidariaBilateria.fasta.txt"
-        database_species = "/dbb/database_phyloBARCODER/MIDORI_LONGEST_GB238_15genes_RAW.fasta"
-        database_haplotype = "/dbb/database_phyloBARCODER/MIDORI_UNIQ_GB238_15genes_RAW.fasta"
-        database_address = "/dbb/database_phyloBARCODER/"
-        rscriptTMP = "rscript"
-        ### Macbook Pro
-    elif "yurai.aori.u-tokyo.ac.jp" in EMAIL_SUBJECT_PREFX:
-        database_species = "/mnt/dbb/database_phyloBARCODER/MIDORI_LONGEST_GB238_15genes_RAW.fasta"
-        database_haplotype = "/mnt/dbb/database_phyloBARCODER/MIDORI_UNIQ_GB238_15genes_RAW.fasta"
-        database_address = "/mnt/dbb/database_phyloBARCODER/"
-        rscriptTMP = "Rscript"
+        if release_MIDORI2DB == "GenBank254":
+            database_address = "/var/www/html/dbb/database_phyloBARCODER/GB254_MIDORI/"
+            database_species = "/var/www/html/dbb/database_phyloBARCODER/GB254_MIDORI/MIDORI2_LONGEST_NUC_GB254_15genes_RAW.fasta"
+            database_haplotype = "/var/www/html/dbb/database_phyloBARCODER/GB254_MIDORI/MIDORI2_UNIQ_NUC_GB254_15genes_RAW1.fasta"
+        elif release_MIDORI2DB == "GenBank259":
+            #print("259")
+            #exit()
+            database_address = "/var/www/html/dbb/database_phyloBARCODER/GB259_MIDORI/"
+            database_species = "/var/www/html/dbb/database_phyloBARCODER/GB259_MIDORI/MIDORI2_LONGEST_NUC_GB259_15genes_RAW.fasta"
+            database_haplotype = "/var/www/html/dbb/database_phyloBARCODER/GB259_MIDORI/MIDORI2_UNIQ_NUC_GB259_15genes_RAW.fasta"
+        ## osaka
     elif "rx1000.site" in EMAIL_SUBJECT_PREFX:
         rscriptTMP = "Rscript"
         if release_MIDORI2DB == "GenBank254":
@@ -407,81 +398,7 @@ def change_MIDORI_nameLine(nameline_fn):
     #exit()
 
     classification_large = "NONE"
-    '''
-    if re.search("_Stramenopiles_", nameline_fn):
-        classification_large = "Stramenopiles"
-    elif re.search("_Amoebozoa_", nameline_fn):
-        classification_large = "Amoebozoa"
-    elif re.search("_Alveolata_", nameline_fn):
-        classification_large = "Alveolata"
-    elif re.search("_Viridiplantae_", nameline_fn):
-        classification_large = "Viridiplantae"
-    elif re.search("_Haptista_", nameline_fn):
-        classification_large = "Haptista"
-    elif re.search("_Cryptophyceae_", nameline_fn):
-        classification_large = "Cryptophyceae"
 
-    elif re.search("_Ichthyosporea_", nameline_fn):
-        classification_large = "Ichthyosporea"
-    elif re.search("_Choanoflagellata_", nameline_fn):
-        classification_large = "Choanoflagellata"
-    elif re.search("_Ctenophora_", nameline_fn):
-        classification_large = "Ctenophora"
-    elif re.search("_Porifera_", nameline_fn):
-        classification_large = "Porifera"
-    elif re.search("_Placozoa_", nameline_fn):
-        classification_large = "Placozoa"
-    elif re.search("_Cnidaria_", nameline_fn):
-        classification_large = "Cnidaria"
-    elif re.search("_Xenacoelomorpha_", nameline_fn):
-        classification_large = "Xenacoelomorpha"
-    elif re.search("_Rotifera_", nameline_fn):
-        classification_large = "Rotifera"
-    elif re.search("_Platyhelminthes_", nameline_fn):
-        classification_large = "Platyhelminthes"
-    elif re.search("_Annelida_", nameline_fn):
-        classification_large = "Annelida"
-    elif re.search("_Nemertea_", nameline_fn):
-        classification_large = "Nemertea"
-    elif re.search("_Brachiopoda_", nameline_fn):
-        classification_large = "Brachiopoda"
-    elif re.search("_Cephalopoda_", nameline_fn):
-        classification_large = "Cephalopoda"
-    elif re.search("_Gastropoda_", nameline_fn):
-        classification_large = "Gastropoda"
-    elif re.search("_Bivalvia_", nameline_fn):
-        classification_large = "Bivalvia"
-    elif re.search("_Priapulida_", nameline_fn):
-        classification_large = "Priapulida"
-    elif re.search("_Nematoda_", nameline_fn):
-        classification_large = "Nematoda"
-    elif re.search("_Chelicerata_", nameline_fn):
-        classification_large = "Chelicerata"
-    elif re.search("_Myriapoda_", nameline_fn):
-        classification_large = "Myriapoda"
-    elif re.search("_Crustacea_", nameline_fn):
-        classification_large = "Crustacea"
-    elif re.search("_Arthropoda_", nameline_fn):
-        classification_large = "Arthropoda"
-    elif re.search("_Hemichordata_", nameline_fn):
-        classification_large = "Hemichordata"
-    elif re.search("_Echinodermata_", nameline_fn):
-        classification_large = "Echinodermata"
-    elif re.search("_Cephalochordata_", nameline_fn):
-        classification_large = "Cephalochordata"
-    elif re.search("_Tunicata_", nameline_fn):
-        classification_large = "Tunicata"
-    elif re.search("_Cyclostomata_", nameline_fn):
-        classification_large = "Cyclostomata"
-    elif re.search("_Chondrichthyes_", nameline_fn):
-        classification_large = "Chondrichthyes"
-    elif re.search("_Teleostei_", nameline_fn):
-        classification_large = "Teleostei"
-    elif re.search("_Mammalia_", nameline_fn):
-        classification_large = "Mammalia"
-    elif re.search("_Aves_", nameline_fn):
-        classification_large = "Aves"
-    '''
     if re.search("_Salmonidae_", nameline_fn):
         classification_large = "Salmonidae"
     else:
@@ -1474,7 +1391,7 @@ def htmlFileMake(linesFN, queryFile, outFileFN):
     out.write("> Number of queries\n"  + str(num_queries)  + "\n")
     out.write("\n")
 
-    out.write("# Sample DB\n")
+    out.write("# Anonymous DB\n")
     out.write(">Number of hits for each query\n" + str(blastHits_anonDB) + "\n")
     out.write(">E-value threshold for reported sequences\n"  + str(blastEvalue_anonseq)  + "\n")
     out.write("\n")
@@ -2493,37 +2410,6 @@ def add_nameline_identities(recs_blastout, fastafile, outfile):
     out.close()
     #exit()
 
-    #        
-    #        if nameline_blasthit == ">***** No hits found *****":
-    #            rec_mafoutname_identity_TMP.append(query + "\tno_hits_found")
-    #        else: 
-    #            nameline_blasthit = re.sub(" .*$", "", nameline_blasthit)
-    #            #print("nameline_blasthit1", nameline_blasthit, "<br>")  ## >SRRNA.AB032554.1.14397
-    #            nameline_blasthit_keyword = re.sub(">([^\.]+)\.([^\.]+\.\d+)\.\d+", r">\2_\1_", nameline_blasthit)
-    #            #print("nameline_blasthit_keyword", nameline_blasthit_keyword, "<br><br>")  ## >SRRNA.AB032554.1.14397
-    #            #exit()
-    #
-    #            identityTMP = rec[5]
-    #            #print("identityTMP", identityTMP, "<br>")
-    #            identity = identityTMP
-    #            identity = re.sub("\).*$", "", identity)
-    #            identity = re.sub("^.*\(", "", identity)
-    #    
-    #            #for line in list_modifiedNames_fn:
-    #            #    print("line", line, "<br>")
-    #            #exit()
-    #    
-    #            name_blastTopHit = "NONE"
-    #            if re.search(nameline_blasthit_keyword, nameline_mafout):
-    #                name_blastTopHit = modifiedNameLine
-    #                #print("nameline_blasthit_keyword", nameline_blasthit_keyword)
-    #                #print("name_blastTopHit", name_blastTopHit)
-    #                #exit()
-    #                rec_mafoutname_identity_TMP.append([query, nameline_blasthit, identity, rec])
-    #            else:
-    #                rec_mafoutname_identity_TMP.append([query, nameline_blasthit, identity, rec])
-    #
-
 
 def reorder_by_treetopology(list_print_taxonomic_lines_fn, treefile):
     pathTMP = eachDirAddress + treefile
@@ -2911,7 +2797,7 @@ print ("Analysis time: {0}".format(elapsed_time) + " seconds")
 
 
 
-htmlAddress = '<br>Finished: <a href="../phylobarcoderWork/' + str(dirname_rand) + '/200_aln_nucl.html" target="_blank">' + str(dirname_rand) + '</a><br><br>'
+htmlAddress = '<br>Finished: <a href="../phylobarcoderWork/' + str(dirname_rand) + '/200_aln_nucl.html" target="_blank">' + str(dirname_rand) + '</a>'
 #htmlAddress = '<br>Finished: <a href="http://localhost/phylobarcoderWork/'              + str(dirname_rand) + '/200_aln_nucl.html" target="_blank">' + str(dirname_rand) + '</a><br><br>'
 
 print(htmlAddress)

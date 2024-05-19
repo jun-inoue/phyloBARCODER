@@ -1,10 +1,4 @@
 $(function() {
-	$("#button_text_area_seq_clear").click(function() {
-		$('textarea[name="text_area_seq"]').val("");
-	});
-});
-
-$(function() {
   $('#my_form').submit('click', function(e) {
     e.preventDefault();
 
