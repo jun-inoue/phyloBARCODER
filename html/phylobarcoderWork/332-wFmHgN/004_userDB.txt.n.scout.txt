@@ -1,0 +1,9 @@
+
+
+Building a new DB, current time: 05/21/2024 15:10:27
+New DB name:   /var/www/html/phylobarcoderWork/332-wFmHgN/004_userDB.txt
+New DB title:  ../html/phylobarcoderWork/332-wFmHgN/004_userDB.txt
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 15168 sequences in 0.312078 seconds.

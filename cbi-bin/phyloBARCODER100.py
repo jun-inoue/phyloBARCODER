@@ -41,7 +41,7 @@ top_html = '''
 <body>
 <pre>
 <span style="font-size: 120%;">
-<b>phyloBARCODER </b>(ver.1.0.0)<br><br>'''
+<b>phyloBARCODER </b>(ver.1.0)<br><br>'''
 
 bottom_html = '''
 </span></pre>
@@ -115,7 +115,7 @@ def checkUploadFile(infileFN):
 
     Infile.close()
 
-    recs_uploaded_eDNA_SEQ_fn = readFasta_dict(eachDirAddress, "000_uploaded_eDNA_file.txt")
+    recs_uploaded_eDNA_SEQ_fn = readFasta_dict(eachDirAddress, "000_uploaded_anonSeqs.txt")
     for name, seq in recs_uploaded_eDNA_SEQ_fn.items():
         if len(seq) > 3000:
             print("Error in your uploaded eDNA sequences.<br>")
@@ -183,20 +183,20 @@ def retrieave_topHTML_infor(query):
     blastEvalue_midori = query.getvalue("blastEvalue_midori")
 
 
-    blastHits_yourRefDB = query.getvalue("blastHits_yourRefDB")
-    blastEvalue_yourRefDB = query.getvalue("blastEvalue_yourRefDB")
+    blastHits_userDB = query.getvalue("blastHits_userDB")
+    blastEvalue_userDB = query.getvalue("blastEvalue_userDB")
 
-    text_your_refseq = ""
+    text_userDB = ""
     if mode_select == "mode_A":
-        input_file_yourrefseqs = query['input_file_yourrefseqs']
-        if (input_file_yourrefseqs.filename):
+        input_file_userDB = query['input_file_userDB']
+        if (input_file_userDB.filename):
             #print("Selected input_file_anonSeqs")
-            text_your_refseq = input_file_yourrefseqs.file.read().decode()
-            #print("text_your_refseq", text_your_refseq)
+            text_userDB = input_file_userDB.file.read().decode()
+            #print("text_userDB", text_userDB)
             #exit()
-            if len(text_your_refseq) < 1:
-                print("Error in your uploaded reference sequence file:<br>")
-                print(input_file_yourrefseqs.filename, "<br>")
+            if len(text_userDB) < 1:
+                print("Error in your uploaded user DB file:<br>")
+                print(input_file_userDB.filename, "<br>")
                 exit()
 
 
@@ -214,14 +214,14 @@ def retrieave_topHTML_infor(query):
     #print("taxon_rank_modeB", taxon_rank_modeB)
     #exit()
     
-    fh = open(eachDirAddress + "000_uploaded_eDNA_file.txt", "w")
+    fh = open(eachDirAddress + "000_uploaded_anonSeqs.txt", "w")
     fh.write(text_area_anonSeq)
     fh.close()
 
-    if text_your_refseq:
-        #print("text_your_refseq present")
-        fh = open(eachDirAddress + "000_uploadedFile_yourRefSeqs.txt", "w")
-        fh.write(text_your_refseq)
+    if text_userDB:
+        #print("text_userDB present")
+        fh = open(eachDirAddress + "000_uploaded_userDB.txt", "w")
+        fh.write(text_userDB)
         fh.close()
 
     #print("blastHits_speciesDB", blastHits_speciesDB, "<br>")
@@ -237,8 +237,8 @@ def retrieave_topHTML_infor(query):
            blastEvalue_midori, \
            blastHits_speciesDB, \
            blastHits_haplotypeDB, \
-           blastHits_yourRefDB, \
-           blastEvalue_yourRefDB,\
+           blastHits_userDB, \
+           blastEvalue_userDB,\
            num_bootstrap, \
            flankingSequence, \
            database_modeB, \
@@ -319,7 +319,7 @@ def outGroupSelect (fastaFile):
 ####
 def makeSummary():
 
-    uploaded_eDNA_SEQfn = readFasta_dict(eachDirAddress, "000_uploaded_eDNA_file.txt")
+    uploaded_eDNA_SEQfn = readFasta_dict(eachDirAddress, "000_uploaded_anonSeqs.txt")
     cDNAfn = ""
 
     fs = open(eachDirAddress + "100_1stAnalysisSummary.txt", "w")
@@ -345,7 +345,7 @@ def makeSummary():
     if num_queries == "NoBlastSearch":
         fs.write("Blast seaech was not conducted.\n")
     else:
-        recsFN = readFasta_dict(eachDirAddress, "005_querySequenceFile.txt")
+        recsFN = readFasta_dict(eachDirAddress, "005_querySequences.txt")
         for name,seq in recsFN.items():
             fs.write(name[1:] + "\n")
             fs.write(seq + "\n")
@@ -528,8 +528,8 @@ def change_nameLine(infile, prefix, out_namechanged_uploaded):
         #else:
         #if num_queries == "NoBlastSearch":
         #    pass
-        #elif blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
-        if blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+        #elif blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
+        if blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
             pass
         else:
             name_new = re.sub("^>", prefix + str(count_yourseq) + "_", name_new)
@@ -945,7 +945,7 @@ def addQuery2recFile_then_reverse(uploadedSequencesFile, retrievedSequencesFile,
 def firstSpeciesPicker(recsFN):
     flag = "notFound"
     for name, seq in recsFN.items():
-        if re.search("SAMP1_", name):
+        if re.search("ANON1_", name):
             keyNameFN = name
             keySequenceFN = seq
             flag = "found"
@@ -1020,7 +1020,7 @@ def add_NCBI_link(lineFN):
     #print("linFN_mod:", linFN_mod, "|<br>")
 
     line_mod = ""
-    if re.search("^ ", lineFN) or re.search("SAMP\d+", lineFN) or re.search("USERDB\d+", lineFN) or re.search("Used4treeSearch", lineFN):
+    if re.search("^ ", lineFN) or re.search("ANON\d+", lineFN) or re.search("USERDB\d+", lineFN) or re.search("Used4treeSearch", lineFN):
         #print("No")
         line_mod = lineFN
     else:
@@ -1036,7 +1036,7 @@ def addColor_nameline(recsFN1, summaryFile):
     for name_seq, seq in recsFN1.items():
         #print("A name_seq|", name_seq, "|")
         for name_color, color in species_color.items():
-            if name_seq.startswith("SAMP") or name_seq.startswith("Used4treeSearch"):
+            if name_seq.startswith("ANON") or name_seq.startswith("Used4treeSearch"):
                 recsFN2[name_seq] = seq
                 break
             if name_seq.startswith(name_color):
@@ -1167,13 +1167,13 @@ def recOneLinesMaker(startPosNF, stopPosNF, recsFN):
 
 def higlightQuery_in_html(recsFN1):
     recsFN = OrderedDict()
-    if os.path.isfile(eachDirAddress + "005_querySequenceFile.txt"):
-        recs_querySeqs = readFasta_dict(eachDirAddress, "005_querySequenceFile.txt")
+    if os.path.isfile(eachDirAddress + "005_querySequences.txt"):
+        recs_querySeqs = readFasta_dict(eachDirAddress, "005_querySequences.txt")
         names_querySeqs = list(recs_querySeqs.keys())
         for name, seq in recsFN1.items():
             name_modified = name
-            if name.startswith("SAMP"):
-                match = re.search("^SAMP(\d+)_", name)
+            if name.startswith("ANON"):
+                match = re.search("^ANON(\d+)_", name)
                 num_yourseq = match.group(1)
                 if int(num_yourseq) == 1:
                     #print("YOURSEQ1_ name", name,"<br>")
@@ -1322,7 +1322,7 @@ def htmlFileMake(linesFN, queryFile, outFileFN):
         #    out.write("Unrooted phylogenetic tree:\n")
         #    out.write('<img src="115_tree_unrooted.png">')
         #    out.write("\n")
-        #if blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+        #if blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
         #    out.write("Unrooted phylogenetic tree:\n")
         #    out.write('<img src="115_tree_unrooted.png">')
         #    out.write("\n")
@@ -1357,7 +1357,7 @@ def htmlFileMake(linesFN, queryFile, outFileFN):
     
     if num_queries == "NoBlastSearch":
         pass
-    elif blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+    elif blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
         pass
     else:
         lines_table_contents = []
@@ -1416,8 +1416,8 @@ def htmlFileMake(linesFN, queryFile, outFileFN):
     out.write("\n")
 
     out.write("# User DB\n")
-    out.write(">Number of hits\n" + str(blastHits_yourRefDB) + "\n")
-    out.write(">E-value\n"  + str(blastEvalue_yourRefDB)  + "\n")
+    out.write(">Number of hits\n" + str(blastHits_userDB) + "\n")
+    out.write(">E-value\n"  + str(blastEvalue_userDB)  + "\n")
     out.write("\n")
 
     out.write(">TreeSearchMethod\n"   + "Neighbor-joining method (Saitou and Nei 1986)\n\n")
@@ -1577,13 +1577,13 @@ def compression():
         shutil.copy(eachDirAddress + "130_mafOut_tree_order.txt", resDirName + "/020_alignment.txt")
         #shutil.copy(eachDirAddress + "140_uploadSeqs_tree_order.txt", resDirName + "/000_uploadedSeqs_treeOrder.txt")
 
-    if os.path.isfile(eachDirAddress + "000_uploaded_eDNA_file.txt"):
-        shutil.copy(eachDirAddress + "000_uploaded_eDNA_file.txt", resDirName + "/010_anonymousSeqs.txt")
+    if os.path.isfile(eachDirAddress + "000_uploaded_anonSeqs.txt"):
+        shutil.copy(eachDirAddress + "000_uploaded_anonSeqs.txt", resDirName + "/010_anonymousSeqs.txt")
 
     if os.path.isfile(eachDirAddress + "085_NJBS1st.txt"):
         shutil.copy(eachDirAddress + "085_NJBS1st.txt", resDirName + "/020_tree.txt")
-    if os.path.isfile(eachDirAddress + "000_uploadedFile_yourRefSeqs.txt"):
-        shutil.copy(eachDirAddress + "000_uploadedFile_yourRefSeqs.txt", resDirName + "/000_uploadedUserREFseqs.txt")
+    if os.path.isfile(eachDirAddress + "000_uploaded_userDB.txt"):
+        shutil.copy(eachDirAddress + "000_uploaded_userDB.txt", resDirName + "/000_uploadedUserREFseqs.txt")
     #if os.path.isfile(eachDirAddress + "seq_selected.html"):
     #    shutil.copy(eachDirAddress + "seq_selected.html", resDirName + "/result" + num_dir + "_phyloBARCODER_seqs.html")
     if mode_select == "mode_B" and os.path.isfile(eachDirAddress + "seq_selected.html"):
@@ -1593,7 +1593,7 @@ def compression():
         pass
     elif num_queries == "NoBlastSearch":
         pass
-    elif blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+    elif blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
         pass
     else:
         shutil.copy(eachDirAddress + "100_taxon_assignment_tree.txt", resDirName + "/030_taxon_assignment.csv")
@@ -1662,8 +1662,8 @@ def save_uploadSeqs(inFileName, outFileName):
 
     out = open(eachDirAddress + outFileName, "w")
     for name, seqs in recs.items():
-        if name.startswith(">SAMP"):
-            name = re.sub(">SAMP\d+_", ">", name)
+        if name.startswith(">ANON"):
+            name = re.sub(">ANON\d+_", ">", name)
             out.write(name + "\n")
             seqs = re.sub("-", "", seqs)
             out.write(seqs + "\n")
@@ -1803,8 +1803,8 @@ def taxonAssignment_from_tree(allNodes_decrement, outfile):
     list_queryLeaves = []
     for leaf in list_leaves_all:
         #print("leaf", leaf, "<br>")
-        if leaf.startswith("SAMP"):
-            match = re.search("SAMP(\d+)_", leaf)
+        if leaf.startswith("ANON"):
+            match = re.search("ANON(\d+)_", leaf)
             number = match.group(1)
             list_queryLeaves.append([int(number), leaf])
     #list_queryLeaves = sorted(list_queryLeaves, key=lambda x: x[1])
@@ -1857,7 +1857,7 @@ def taxonAssignment_from_tree(allNodes_decrement, outfile):
 
         #fh.write(queryLeaf + "\tNA\t" + line_large_taxon + "\t" + line_middle_taxon + "\t" + line_genus_taxon + "\t" + line_species_taxon + "\n")
 
-        match = re.search("(SAMP\d+)_(.*$)", queryLeaf)
+        match = re.search("(ANON\d+)_(.*$)", queryLeaf)
         Num_UPLOAD = match.group(1)
         UploadedName = match.group(2)
         #fh.write(Num_UPLOAD + "\t" + UploadedName + "\t" + line_species_taxon + "\t" + line_genus_taxon + "\t" + line_middle_taxon + "\t" + line_large_taxon + "\n")
@@ -2254,7 +2254,7 @@ def add_recs_blastout_sequenceID(filename_blastout):
         #print("blastHit", blastHit, "<br>")
 
         sequenceID = ""
-        if blastHit.startswith(">SAMP") or blastHit.startswith(">USERDB") :
+        if blastHit.startswith(">ANON") or blastHit.startswith(">USERDB") :
             match = re.search("^>([^_]+)_", blastHit)
             sequenceID = match.group(1)
             #print("sequenceID", sequenceID, "<br><br>")
@@ -2267,9 +2267,9 @@ def add_recs_blastout_sequenceID(filename_blastout):
     return recs_blastout_sequenceID
 
 
-def choose_recs_blastout_SAMP1(recs_blastout):
-    #print("#### choose_recs_blastout_SAMP1 ####<br>")
-    recs_blastout_SAMP1 = []
+def choose_recs_blastout_ANON1(recs_blastout):
+    #print("#### choose_recs_blastout_ANON1 ####<br>")
+    recs_blastout_ANON1 = []
     for rec in  recs_blastout:
         #for rec in recs:
         #    print("rec", rec, "<br>")
@@ -2293,10 +2293,10 @@ def choose_recs_blastout_SAMP1(recs_blastout):
 
         #print("blastHit", blastHit, "<br>")
 
-        if query.startswith("Query= SAMP1_"):
-            recs_blastout_SAMP1.append(rec)
+        if query.startswith("Query= ANON1_"):
+            recs_blastout_ANON1.append(rec)
 
-    return recs_blastout_SAMP1
+    return recs_blastout_ANON1
 
 
 def make_list_print_taxonomic_lines(list_modifiedNames_fn, recs_query_blasttophit_fn):
@@ -2421,7 +2421,7 @@ def reorder_by_treetopology(list_print_taxonomic_lines_fn, treefile):
         list_leaves_all = get_leaves(treeFN)
         for nameline_tree in list_leaves_all:
             #print("nameline_tree", nameline_tree, "<br>")
-            if nameline_tree.startswith("SAMP"):
+            if nameline_tree.startswith("ANON"):
                 for line_assigned_res in list_print_taxonomic_lines_fn:
                     #print("line_assigned_res", line_assigned_res, "<br>")
                     if re.search(nameline_tree, line_assigned_res):
@@ -2475,7 +2475,7 @@ def reorder_by_treetopology(list_print_taxonomic_lines_fn, treefile):
 #    #exit()
 #
 #    fh = open(eachDirAddress + outfile, "w")
-#    fh.write("SAMP\tidentity\tLarge grouping\tMiddle grouping\tGenus\tSpecies\tnameline\n") 
+#    fh.write("ANON\tidentity\tLarge grouping\tMiddle grouping\tGenus\tSpecies\tnameline\n") 
 #    if list_print_lines2:
 #        for line in list_print_lines2:
 #            fh.write(line + "\n")
@@ -2530,8 +2530,8 @@ release_MIDORI2DB, \
 blastEvalue_midori, \
 blastHits_speciesDB, \
 blastHits_haplotypeDB, \
-blastHits_yourRefDB, \
-blastEvalue_yourRefDB,\
+blastHits_userDB, \
+blastEvalue_userDB,\
 num_bootstrap, \
 flankingSequence, \
 database_modeB, \
@@ -2559,7 +2559,7 @@ rscriptTMP \
 #exit()
 #print("blastHits_speciesDB", blastHits_speciesDB, "<br>")
 #print("blastHits_haplotypeDB", blastHits_haplotypeDB, "<br>")
-#print("blastHits_yourRefDB", blastHits_yourRefDB, "<br>")
+#print("blastHits_userDB", blastHits_userDB, "<br>")
 #print("blastEvalue_midori", blastEvalue_midori, "<br>")
 #print("word_size", word_size, "<br>")
 #print("flankingSequence", flankingSequence, "<br>")
@@ -2577,7 +2577,7 @@ word_size_yourseq = ['11', '11']
 num_queries = "First3seqs"
 blastHits_speciesDB = "5"
 blastHits_haplotypeDB = "10"
-blastHits_yourRefDB = "5" 
+blastHits_userDB = "5" 
 blastEvalue_midori = "1e-3"
 word_size = "11"
 text_area_anonSeq = "DAMMY"
@@ -2601,38 +2601,40 @@ if mode_select == "mode_B":
     exit()
 
 
-#######################
-checkUploadFile(infileFN = "000_uploaded_eDNA_file.txt")
-change_nameLine("000_uploaded_eDNA_file.txt", prefix=">SAMP", out_namechanged_uploaded = "003_eDNAFile_nameChanged.txt")
-if os.path.isfile(eachDirAddress + "000_uploadedFile_yourRefSeqs.txt"):
-    #print("000_uploadedFile_yourRefSeqs.txt found.<br>")
+####################### 
+checkUploadFile(infileFN = "000_uploaded_anonSeqs.txt")
+change_nameLine("000_uploaded_anonSeqs.txt", prefix=">ANON", out_namechanged_uploaded = "003_annonymousDB.txt")
+if os.path.isfile(eachDirAddress + "000_uploaded_userDB.txt"):
+    #print("000_uploaded_userDB.txt found.<br>")
     #exit()
-    checkUploadFile(infileFN = "000_uploadedFile_yourRefSeqs.txt")
-    change_nameLine("000_uploadedFile_yourRefSeqs.txt", prefix=">USERDB", out_namechanged_uploaded = "004_yourRefSeqs_nameChanged.txt")
+    checkUploadFile(infileFN = "000_uploaded_userDB.txt")
+    change_nameLine("000_uploaded_userDB.txt", prefix=">USERDB", out_namechanged_uploaded = "004_userDB.txt")
 if num_queries == "NoBlastSearch":
     pass
-elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
     #print("pass2")
     pass
 else:
-    make_querySequenceFile(inFileName = "003_eDNAFile_nameChanged.txt", outFileName = "005_querySequenceFile.txt")
+    make_querySequenceFile(inFileName = "003_annonymousDB.txt", outFileName = "005_querySequences.txt")
 
 
+####################### BLAST: makeblastdb
 if blastHits_anonDB != "NotSelected":
-    conduct_makeblastdb(eachDirAddressFN=eachDirAddress, database_selected="003_eDNAFile_nameChanged.txt", outfileFN="003_eDNAFile_nameChanged.txt.n.scout.txt")
-if os.path.isfile(eachDirAddress + "004_yourRefSeqs_nameChanged.txt"):
-    conduct_makeblastdb(eachDirAddressFN=eachDirAddress, database_selected="004_yourRefSeqs_nameChanged.txt", outfileFN="004_yourRefSeqs_nameChanged.txt.n.scout.txt")
+    conduct_makeblastdb(eachDirAddressFN=eachDirAddress, database_selected="003_annonymousDB.txt", outfileFN="003_annonymousDB.txt.n.scout.txt")
+if os.path.isfile(eachDirAddress + "004_userDB.txt"):
+    conduct_makeblastdb(eachDirAddressFN=eachDirAddress, database_selected="004_userDB.txt", outfileFN="004_userDB.txt.n.scout.txt")
 
 
+####################### BLAST: blastn
 #print("blastHits_anonDB", blastHits_anonDB, "<br>")
 #print("blastHits_speciesDB", blastHits_speciesDB, "<br>")
 #print("blastHits_haplotypeDB", blastHits_haplotypeDB, "<br>")
-#print("blastHits_yourRefDB", blastHits_yourRefDB, "<br>")
+#print("blastHits_userDB", blastHits_userDB, "<br>")
 #exit()
 if num_queries == "NoBlastSearch":
     print("1 pass<br>")
     pass
-elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
     print("2 pass<br>")
     pass
     #print("Select values at least one of WHOLE or PARTIAL<br>")
@@ -2644,50 +2646,50 @@ else:
         #print("Blast only for uploaded your seqs.<br>")
         #print('blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected"<br>')
         #print("eachDirAddress", eachDirAddress, "<br>")
-        database_yourseq = eachDirAddress + "003_eDNAFile_nameChanged.txt"
-        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequenceFile.txt", database_selected=database_yourseq, num_alignments=blastHits_anonDB, outfile_blastn="010_blast_resut_uploadedDB.txt")
+        database_yourseq = eachDirAddress + "003_annonymousDB.txt"
+        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequences.txt", database_selected=database_yourseq, num_alignments=blastHits_anonDB, outfile_blastn="010_blast_resut_uploadedDB.txt")
         #elapsed_time_yourseq_hits = round((time.time() - startTime),1)
         #print ("blastHits_anonDB analysis time: {0}".format(elapsed_time_yourseq_hits) + " seconds<br>")
 
     if blastHits_speciesDB != "NotSelected":
         #print("database_species", database_species, "<br>")
-        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequenceFile.txt", database_selected=database_species, num_alignments=blastHits_speciesDB, outfile_blastn="010_blast_resut_speciesDB.txt")
+        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequences.txt", database_selected=database_species, num_alignments=blastHits_speciesDB, outfile_blastn="010_blast_resut_speciesDB.txt")
         #elapsed_time_species_hits = round((time.time() - startTime),1)
         #print ("blastHits_speciesDB analysis time: {0}".format(elapsed_time_species_hits) + " seconds<br>")
 
     if blastHits_haplotypeDB != "NotSelected":
-        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequenceFile.txt", database_selected=database_haplotype, num_alignments=blastHits_haplotypeDB, outfile_blastn="010_blast_resut_haplotypeDB.txt")
+        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequences.txt", database_selected=database_haplotype, num_alignments=blastHits_haplotypeDB, outfile_blastn="010_blast_resut_haplotypeDB.txt")
         #elapsed_time_haplotype_hits = round((time.time() - startTime),1)
         #print ("blastHits_haplotypeDB analysis time: {0}".format(elapsed_time_haplotype_hits) + " seconds<br>")
 
-    if blastHits_yourRefDB != "NotSelected":
-        #print("blastHits_yourRefDB != NotSelected<br>")
+    if blastHits_userDB != "NotSelected":
+        #print("blastHits_userDB != NotSelected<br>")
         #exit()
-        database_yourRefSeq = eachDirAddress + "004_yourRefSeqs_nameChanged.txt"
-        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequenceFile.txt", database_selected=database_yourRefSeq, num_alignments=blastHits_yourRefDB, outfile_blastn="010_blast_resut_yourRefDB.txt")
+        database_yourRefSeq = eachDirAddress + "004_userDB.txt"
+        conduct_blastn(eachDirAddressFN=eachDirAddress, querieSequenceFile="005_querySequences.txt", database_selected=database_yourRefSeq, num_alignments=blastHits_userDB, outfile_blastn="010_blast_resut_yourRefDB.txt")
         elapsed_time_yourref_hits = round((time.time() - startTime),1)
-        #print ("blastHits_yourRefDB analysis time: {0}".format(elapsed_time_yourref_hits) + " seconds<br>")
+        #print ("blastHits_userDB analysis time: {0}".format(elapsed_time_yourref_hits) + " seconds<br>")
         #exit()
 
 
-#print("## making 012_blast_resut.txt ##<br>")
-out = open(eachDirAddress + "012_blast_resut.txt", "w")
+#print("## making 012_blast_resut_all.txt ##<br>")
+out = open(eachDirAddress + "012_blast_resut_all.txt", "w")
 out.write("")
 out.close
 #if os.path.isfile(eachDirAddress + "010_blast_resut_uploadedDB.txt"):
 if blastHits_anonDB != "NotSelected":
-    cat_line = "cat " + eachDirAddress + "010_blast_resut_uploadedDB.txt >> " + eachDirAddress + "012_blast_resut.txt"
+    cat_line = "cat " + eachDirAddress + "010_blast_resut_uploadedDB.txt >> " + eachDirAddress + "012_blast_resut_all.txt"
     subprocess.call(cat_line, shell=True)
 #if os.path.isfile(eachDirAddress + "010_blast_resut_haplotypeDB.txt"):
-if blastHits_yourRefDB != "NotSelected":
-    cat_line = "cat " + eachDirAddress + "010_blast_resut_yourRefDB.txt >> " + eachDirAddress + "012_blast_resut.txt"
+if blastHits_userDB != "NotSelected":
+    cat_line = "cat " + eachDirAddress + "010_blast_resut_yourRefDB.txt >> " + eachDirAddress + "012_blast_resut_all.txt"
     subprocess.call(cat_line, shell=True)
 if blastHits_haplotypeDB != "NotSelected":
-    cat_line = "cat " + eachDirAddress + "010_blast_resut_haplotypeDB.txt >> " + eachDirAddress + "012_blast_resut.txt"
+    cat_line = "cat " + eachDirAddress + "010_blast_resut_haplotypeDB.txt >> " + eachDirAddress + "012_blast_resut_all.txt"
     subprocess.call(cat_line, shell=True)
 #if os.path.isfile(eachDirAddress + "010_blast_resut_speciesDB.txt"):
 if blastHits_speciesDB != "NotSelected":
-    cat_line = "cat " + eachDirAddress + "010_blast_resut_speciesDB.txt >> " + eachDirAddress + "012_blast_resut.txt"
+    cat_line = "cat " + eachDirAddress + "010_blast_resut_speciesDB.txt >> " + eachDirAddress + "012_blast_resut_all.txt"
     subprocess.call(cat_line, shell=True)
 
 #conduct_blastdbcmd(eachDirAddressFN=eachDirAddress, infile_blastres="010G_blast_resut.txt", database_selected=database_species, num_alignments=blastHits_speciesDB, outfileName= "012G_retrievedSequences.txt")
@@ -2695,49 +2697,56 @@ if blastHits_speciesDB != "NotSelected":
 #combine_2retrievedSeqFiles(infileG = "012G_retrievedSequences.txt", infileP = "012P_retrievedSequences.txt", outfileName= "012retrievedSequences.txt")
 
 
+####################### BLAST: blastdbcmd
+
 if num_queries == "NoBlastSearch":
     pass
-elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
     pass
 else:
     #print("to read_blastnRes2<br>")
     #exit()
-    list_recs_blastnRes = read_blastnRes2("012_blast_resut.txt")
+    list_recs_blastnRes = read_blastnRes2("012_blast_resut_all.txt")
     #for rec in list_recs_blastnRes:
     #    print("rec", rec, "<br><br>")
     #exit()
-    conduct_blastdbcmd(list_recs_blastnRes, outfileName= "012_retrievedSequences.txt")
+    conduct_blastdbcmd(list_recs_blastnRes, outfileName= "012_BLASThits.txt")
 
-#print("blastHits_yourRefDB", blastHits_yourRefDB, "<br>")
+
+####################### Make multiple fast file
+
+#print("blastHits_userDB", blastHits_userDB, "<br>")
 if num_queries == "NoBlastSearch":
     #print("1111<br>")
-    reverse_sequence_file(uploadedSequencesFile = "003_eDNAFile_nameChanged.txt", outfile = "015_queryPlusRetrievedSequences.txt")
-elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+    reverse_sequence_file(uploadedSequencesFile = "003_annonymousDB.txt", outfile = "015_queries_BLASThits.txt")
+elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
     #print("2222<br>")
-    reverse_sequence_file(uploadedSequencesFile = "003_eDNAFile_nameChanged.txt", outfile = "015_queryPlusRetrievedSequences.txt")
+    reverse_sequence_file(uploadedSequencesFile = "003_annonymousDB.txt", outfile = "015_queries_BLASThits.txt")
 else:
     #print("3333<br>")
-    #addQuery2recFile_then_reverse(uploadedSequencesFile = "003_eDNAFile_nameChanged.txt", retrievedSequencesFile = "012_retrievedSequences.txt", outfile = "015_queryPlusRetrievedSequences.txt")
-    addQuery2recFile_then_reverse(uploadedSequencesFile = "005_querySequenceFile.txt", retrievedSequencesFile = "012_retrievedSequences.txt", outfile = "015_queryPlusRetrievedSequences.txt")
+    #addQuery2recFile_then_reverse(uploadedSequencesFile = "003_annonymousDB.txt", retrievedSequencesFile = "012_BLASThits.txt", outfile = "015_queries_BLASThits.txt")
+    addQuery2recFile_then_reverse(uploadedSequencesFile = "005_querySequences.txt", retrievedSequencesFile = "012_BLASThits.txt", outfile = "015_queries_BLASThits.txt")
 
-check_blasthits(eachDirAddressFN=eachDirAddress, infileName="015_queryPlusRetrievedSequences.txt")
+check_blasthits(eachDirAddressFN=eachDirAddress, infileName="015_queries_BLASThits.txt")
 
-###
+
+
+####################### Alignment
 
 #print("num_queries", num_queries, "<br>")
 #exit()
 if num_queries != "NoBlastSearch":
     #print("num_queries != NoBlastSearch <br>")
-    recs_blastout = add_recs_blastout_sequenceID("012_blast_resut.txt")
-    recs_blastout_SAMP1 = choose_recs_blastout_SAMP1(recs_blastout)
-    #for rec in recs_blastout_SAMP1:
+    recs_blastout = add_recs_blastout_sequenceID("012_blast_resut_all.txt")
+    recs_blastout_ANON1 = choose_recs_blastout_ANON1(recs_blastout)
+    #for rec in recs_blastout_ANON1:
     #    print("rec", rec, "<br>")
     #exit()
-    add_nameline_identities(recs_blastout_SAMP1, fastafile="015_queryPlusRetrievedSequences.txt", outfile="015_queryPlusRetrievedSequences_identities.txt")
-    maffLine1 = "PHYLOBARCODERscripts/mafft --preservecase " + eachDirAddress + "015_queryPlusRetrievedSequences_identities.txt > " + eachDirAddress + "020_mafOut.txt"
+    add_nameline_identities(recs_blastout_ANON1, fastafile="015_queries_BLASThits.txt", outfile="015_queries_BLASThits_identities.txt")
+    maffLine1 = "PHYLOBARCODERscripts/mafft --preservecase " + eachDirAddress + "015_queries_BLASThits_identities.txt > " + eachDirAddress + "020_mafOut.txt"
 else:
     print("else: num_queries != NoBlastSearch <br>")
-    maffLine1 = "PHYLOBARCODERscripts/mafft --preservecase " + eachDirAddress + "015_queryPlusRetrievedSequences.txt > " + eachDirAddress + "020_mafOut.txt"
+    maffLine1 = "PHYLOBARCODERscripts/mafft --preservecase " + eachDirAddress + "015_queries_BLASThits.txt > " + eachDirAddress + "020_mafOut.txt"
 ####
 #print("maffLine1", maffLine1, "<br>")
 subprocess.call(maffLine1, shell=True)
@@ -2749,6 +2758,8 @@ subprocess.call(trimLine1, shell=True)
 changeNameLine_trimalOutName(infile="030_trimalOut.fas.trm", outfile="035_trimalOut.fas.nameChanged.trm")
 
 
+####################### Tree search
+
 outgroup1 = outGroupSelect("035_trimalOut.fas.nameChanged.trm")
 #print("outgroup1", outgroup1)
 NJBSline1 = "PHYLOBARCODERscripts/" + rscriptTMP + " PHYLOBARCODERscripts/085_NJBSa.R " + eachDirAddress + "035_trimalOut.fas.nameChanged.trm " + outgroup1 + " TN93 " + num_bootstrap + " " + eachDirAddress + "085_NJBS1st.txt > " + eachDirAddress + "085_log.txt"
@@ -2756,22 +2767,28 @@ NJBSline1 = "PHYLOBARCODERscripts/" + rscriptTMP + " PHYLOBARCODERscripts/085_NJ
 subprocess.call(NJBSline1, shell=True)
 #exit()
 
-ignore_start_word = "SAMP"
+
+####################### Taxon assignment
+
+ignore_start_word = "ANON"
 if num_queries == "NoBlastSearch":
     pass
-elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_yourRefDB == "NotSelected":
+elif blastHits_anonDB == "NotSelected" and blastHits_speciesDB == "NotSelected" and blastHits_haplotypeDB == "NotSelected" and blastHits_userDB == "NotSelected":
     pass
 else:
     #print("## to make_taxonAssignmentFile_from_tree ##<br>")
-    #make_taxonAssignment_from_blast(uploadedFile = "003_eDNAFile_nameChanged.txt", blastRefFile = "012_blast_resut.txt", mafoutFile="020_mafOut.txt", outfile = "100_taxon_assignment_blast.txt")
-    #recs_blastIdentiries_UPLOAD1_vs_others_With_MaffoutName = make_recs_blastIdentiries_UPLOAD1_vs_others_With_MaffoutName(blastRefFile = "012_blast_resut.txt", mafoutFile="020_mafOut.txt")
+    #make_taxonAssignment_from_blast(uploadedFile = "003_annonymousDB.txt", blastRefFile = "012_blast_resut_all.txt", mafoutFile="020_mafOut.txt", outfile = "100_taxon_assignment_blast.txt")
+    #recs_blastIdentiries_UPLOAD1_vs_others_With_MaffoutName = make_recs_blastIdentiries_UPLOAD1_vs_others_With_MaffoutName(blastRefFile = "012_blast_resut_all.txt", mafoutFile="020_mafOut.txt")
     make_taxonAssignmentFile_from_tree(treeFile = "085_NJBS1st.txt", outfile_assign_tree = "100_taxon_assignment_tree.txt")
     #exit()
 
 
+####################### Make summary
+
 makeSummary()
 
 
+####################### Tree plot
 
 treePlotR = "PHYLOBARCODERscripts/" + rscriptTMP + " PHYLOBARCODERscripts/115_treePlot_pSCOPE.R " + eachDirAddress + "100_1stAnalysisSummary.txt " + eachDirAddress + "115_ > " + eachDirAddress + "115_logTreePlotB.txt"
 #print("treePlotR: ", treePlotR)
@@ -2784,17 +2801,21 @@ characters_total = fas_reorder_by_tree(inFileName = "020_mafOut.txt", outFileNam
 #exit()
 save_uploadSeqs(inFileName = "130_mafOut_tree_order.txt", outFileName="140_uploadSeqs_tree_order.txt")
 
-make_resHTMLfile(infile = "020_mafOut.txt", queryFile = "003_eDNAFile_nameChanged.txt", outfile = "200_aln_nucl.html")
+make_resHTMLfile(infile = "020_mafOut.txt", queryFile = "003_annonymousDB.txt", outfile = "200_aln_nucl.html")
 
 change_resHTMLfile(infile200 = "200_aln_nucl.html", outfile210 = "210_aln_nucl.html")
 
 
+####################### Make download files
+
 compression()
 
 
+
+####################### Make result messages
+
 elapsed_time = round((time.time() - startTime),1)
 print ("Analysis time: {0}".format(elapsed_time) + " seconds")
-
 
 
 htmlAddress = '<br>Finished: <a href="../phylobarcoderWork/' + str(dirname_rand) + '/200_aln_nucl.html" target="_blank">' + str(dirname_rand) + '</a>'
@@ -2807,5 +2828,3 @@ print(htmlAddress)
 
 
 exit()
-
-

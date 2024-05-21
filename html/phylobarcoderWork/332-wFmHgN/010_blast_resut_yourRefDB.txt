@@ -1,0 +1,240 @@
+BLASTN 2.7.1+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: ../html/phylobarcoderWork/332-wFmHgN/004_userDB.txt
+           15,168 sequences; 2,599,111 total letters
+
+
+
+Query= ANON1_OTU_006_B06-0m
+
+Length=173
+
+
+>USERDB11924_gb_475_005_Scomber_japonicus 
+Length=169
+
+ Score = 306 bits (338),  Expect = 3e-84
+ Identities = 169/169 (100%), Gaps = 0/169 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+
+
+>USERDB11931_gb_475_015_Scomber_australasicus 
+Length=169
+
+ Score = 300 bits (332),  Expect = 1e-82
+ Identities = 168/169 (99%), Gaps = 0/169 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |||||||||||||||||||||| ||||||||||||||||||||||||||
+Sbjct  121  CTTCCACGAAAGTGACTTTATTGCCCCCGACCCCACGAAAGCTAGGACA  169
+
+
+>USERDB11943_gb_AB120717_Scomber_scombrus 
+Length=169
+
+ Score = 264 bits (292),  Expect = 8e-72
+ Identities = 160/169 (95%), Gaps = 0/169 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            || | ||||||||||||||| | |||||||||||| |||||||||||||| |||||||||
+Sbjct  61   AATTTAAAACTAAAGCCGAACACCTTCAGGGCAGTCATACGCTTCCGAAGGCACGAAGCC  120
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            | |||||||||||| ||||| ||||||||||||||||||||||||||||
+Sbjct  121  CCTCCACGAAAGTGGCTTTACTACCCCCGACCCCACGAAAGCTAGGACA  169
+
+
+>USERDB11945_gb_AF055594_Scomber_scombrus 
+Length=169
+
+ Score = 260 bits (288),  Expect = 9e-71
+ Identities = 159/169 (94%), Gaps = 0/169 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            || | ||||||||||||||| | || ||||||||| |||||||||||||| |||||||||
+Sbjct  61   AATTTAAAACTAAAGCCGAACACCTCCAGGGCAGTCATACGCTTCCGAAGGCACGAAGCC  120
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            | |||||||||||| ||||| ||||||||||||||||||||||||||||
+Sbjct  121  CCTCCACGAAAGTGGCTTTACTACCCCCGACCCCACGAAAGCTAGGACA  169
+
+
+>USERDB11988_gb_KM651783_Euthynnus_affinis 
+Length=168
+
+ Score = 239 bits (264),  Expect = 3e-64
+ Identities = 155/169 (92%), Gaps = 1/169 (1%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            |||||||||||||||| |||||||||||||||||| ||||||||||||||||||| || |
+Sbjct  1    CACCGCGGTTATACGAGAGGCCCAAGTTGACAGACACCGGCGTAAAGCGTGGTTAAGGTA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            |||| ||||||||||||||||| ||||||||||||||||||| ||||||| |||||||||
+Sbjct  61   AACT-AAAACTAAAGCCGAATACCTTCAGGGCAGTTATACGCATCCGAAGGCACGAAGCC  119
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |  ||||||||||| |||||| ||||| |||||||||||||||| ||||
+Sbjct  120  CCACCACGAAAGTGGCTTTATGACCCCTGACCCCACGAAAGCTATGACA  168
+
+
+>USERDB11951_gb_AP012946_Euthynnus_affinis 
+Length=168
+
+ Score = 239 bits (264),  Expect = 3e-64
+ Identities = 155/169 (92%), Gaps = 1/169 (1%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            |||||||||||||||| |||||||||||||||||| ||||||||||||||||||| || |
+Sbjct  1    CACCGCGGTTATACGAGAGGCCCAAGTTGACAGACACCGGCGTAAAGCGTGGTTAAGGTA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            |||| ||||||||||||||||| ||||||||||||||||||| ||||||| |||||||||
+Sbjct  61   AACT-AAAACTAAAGCCGAATACCTTCAGGGCAGTTATACGCATCCGAAGGCACGAAGCC  119
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |  ||||||||||| |||||| ||||| |||||||||||||||| ||||
+Sbjct  120  CCACCACGAAAGTGGCTTTATGACCCCTGACCCCACGAAAGCTATGACA  168
+
+
+>USERDB11939_gb_AB103467_Auxis_rochei 
+Length=168
+
+ Score = 239 bits (264),  Expect = 3e-64
+ Identities = 155/169 (92%), Gaps = 1/169 (1%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            |||||||||||||||| |||||||||||||||||| ||||||||||||||||||| ||||
+Sbjct  1    CACCGCGGTTATACGAGAGGCCCAAGTTGACAGACACCGGCGTAAAGCGTGGTTAAGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            |||| ||||||||||||||| | ||||||||||||||||||| ||||||| |||||||||
+Sbjct  61   AACT-AAAACTAAAGCCGAACACCTTCAGGGCAGTTATACGCATCCGAAGGCACGAAGCC  119
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |  ||||||||||| |||||| ||||| |||||||||||||||| ||||
+Sbjct  120  CCACCACGAAAGTGGCTTTATGACCCCTGACCCCACGAAAGCTATGACA  168
+
+
+>USERDB11920_gb_475_001_Euthynnus_affinis 
+Length=168
+
+ Score = 239 bits (264),  Expect = 3e-64
+ Identities = 155/169 (92%), Gaps = 1/169 (1%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            |||||||||||||||| |||||||||||||||||| ||||||||||||||||||| || |
+Sbjct  1    CACCGCGGTTATACGAGAGGCCCAAGTTGACAGACACCGGCGTAAAGCGTGGTTAAGGTA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            |||| ||||||||||||||||| ||||||||||||||||||| ||||||| |||||||||
+Sbjct  61   AACT-AAAACTAAAGCCGAATACCTTCAGGGCAGTTATACGCATCCGAAGGCACGAAGCC  119
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            |  ||||||||||| |||||| ||||| |||||||||||||||| ||||
+Sbjct  120  CCACCACGAAAGTGGCTTTATGACCCCTGACCCCACGAAAGCTATGACA  168
+
+
+>USERDB13187_gb_475_019_Rastrelliger_faughni 
+Length=169
+
+ Score = 237 bits (262),  Expect = 1e-63
+ Identities = 154/169 (91%), Gaps = 0/169 (0%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||
+Sbjct  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAAGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            ||||  |||||||||||||||| ||||| |||||| ||||| |||||||| |||||||||
+Sbjct  61   AACTACAAACTAAAGCCGAATACCTTCAAGGCAGTCATACGTTTCCGAAGGCACGAAGCC  120
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCCGACCCCACGAAAGCTAGGACA  169
+            | |||||||||||| ||||| |   || |||||||||||||||||||||
+Sbjct  121  CCTCCACGAAAGTGGCTTTACTCATCCTGACCCCACGAAAGCTAGGACA  169
+
+
+>USERDB11990_gb_KP259548_Auxis_rochei 
+Length=169
+
+ Score = 237 bits (262),  Expect = 1e-63
+ Identities = 156/170 (92%), Gaps = 2/170 (1%)
+ Strand=Plus/Plus
+
+Query  1    CACCGCGGTTATACGATAGGCCCAAGTTGACAGACCCCGGCGTAAAGCGTGGTTAGGGAA  60
+            |||||||||||||||| |||||||||||||||||| ||||||||||||||||||| ||||
+Sbjct  1    CACCGCGGTTATACGAGAGGCCCAAGTTGACAGACACCGGCGTAAAGCGTGGTTAAGGAA  60
+
+Query  61   AACTCAAAACTAAAGCCGAATATCTTCAGGGCAGTTATACGCTTCCGAAGACACGAAGCC  120
+            |||| ||||||||||||||| | ||||||||||||||||||| ||||||| |||||||||
+Sbjct  61   AACT-AAAACTAAAGCCGAACACCTTCAGGGCAGTTATACGCATCCGAAGGCACGAAGCC  119
+
+Query  121  CTTCCACGAAAGTGACTTTATTACCCCC-GACCCCACGAAAGCTAGGACA  169
+            |  ||||||||||| |||||| |||||| |||||||||||||||| ||||
+Sbjct  120  CCACCACGAAAGTGGCTTTATGACCCCCTGACCCCACGAAAGCTATGACA  169
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 342077665
+
+
+  Database: ../html/phylobarcoderWork/332-wFmHgN/004_userDB.txt
+    Posted date:  May 21, 2024  3:10 PM
+  Number of letters in database: 2,599,111
+  Number of sequences in database:  15,168
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2
