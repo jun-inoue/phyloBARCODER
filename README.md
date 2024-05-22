@@ -20,8 +20,8 @@ osaka
 ---
 ## Installation　　　
 If users install phyloBARCODER on your own web server, download Source code from Releases and set up the server as follows:
-- install R and package, [ape](https://github.com/emmanuelparadis/ape?tab=readme-ov-file).
-- save downloaded html and cgi-bin directories in /var/www/.
+- download latest version of phyloBARCODER from [Releases](https://github.com/jun-inoue/phyloBARCODER/releases) and save downloaded html and cgi-bin directories in /var/www/.
+- install R and a package, [ape](https://github.com/emmanuelparadis/ape?tab=readme-ov-file).
 - save dowlonaded dependencies (Rscript, BLASTN, BLASTDBCMD, MAKEBLASTDB, MAFFT, and TRIMAL) in the /cgi-bin/PHYLOBARCODERscripts directory.   
 
 Those scripts were confirmed to run on the Linux operating system with an Apache HTTP Server Server.   
