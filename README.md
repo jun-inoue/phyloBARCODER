@@ -29,7 +29,7 @@ Those scripts were confirmed to run on the Linux operating system with an Apache
 ---
 ## Citation
 Inoue J. et al. 
-phyloBARCODER: An web tool for phylogenetic classification of eukaryote metabarcodes using custom reference databases. Molecular Biology and Evolution, in press.   
+phyloBARCODER: An web tool for phylogenetic classification of eukaryote metabarcodes using custom reference databases. Molecular Biology and Evolution, in press. [Link](https://academic.oup.com/mbe/advance-article/doi/10.1093/molbev/msae111/7689935?utm_source=advanceaccess&utm_campaign=mbe&utm_medium=email).   
 
 ---
 ## Contact 
