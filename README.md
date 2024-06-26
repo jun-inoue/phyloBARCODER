@@ -15,7 +15,8 @@ osaka
 
 ---
 ## Instruction　　　
-[https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)
+English [https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)
+Japanese [https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)
 
 ---
 ## Installation　　　
