@@ -1,5 +1,5 @@
 # phyloBARCODER
-phyloBARCODER is a web tool for species identification of metabarcoding DNA sequences by estimating phylogenetic trees. Version 1 stores a database comprising all eukaryotic mitochondrial gene sequences. 
+A web tool for species identification of metabarcoding DNA sequences by estimating phylogenetic trees. Version 1 stores a database comprising all eukaryotic mitochondrial gene sequences. 
 
 
 ---
