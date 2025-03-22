@@ -8,7 +8,6 @@ A web tool for species identification of metabarcoding DNA sequences by estimati
 viento - fast   
 [https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder/)      
 (from 19 Oct. 2023)   
-Stopped due to power outage until 30 Sep 2024.   Please use mirro osaka.   
 
 osaka   
 [http://133.167.86.72/phylobarcoder/](http://133.167.86.72/phylobarcoder/)   
