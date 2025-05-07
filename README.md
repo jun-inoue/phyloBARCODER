@@ -22,7 +22,7 @@ Japanese
 
 ---
 ## Programming Code　　　
-The programming code is accessible from [Releases](https://github.com/jun-inoue/phyloBARCODER/releases). If users install phyloBARCODER on your web server, download the source code and set up the server as follows:
+The programming code is accessible from [Releases](https://github.com/jun-inoue/phyloBARCODER/releases). Users install phyloBARCODER set up servers as follows:
 - save downloaded html and cgi-bin directories in /var/www/.
 - install R and a package, [ape](https://github.com/emmanuelparadis/ape?tab=readme-ov-file).
 - save dowlonaded dependencies (Rscript, BLASTN, BLASTDBCMD, MAKEBLASTDB, MAFFT, and TRIMAL) in the /cgi-bin/PHYLOBARCODERscripts directory.   
