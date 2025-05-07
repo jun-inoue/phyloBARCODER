@@ -21,7 +21,7 @@ Japanese
 [https://fish-evol.org/phylobarcoder_instruction/indexJPN.html](https://fish-evol.org/phylobarcoder_instruction/indexJPN.html)   
 
 ---
-## Programming Code　　　
+## Programming code　　　
 The programming code is accessible from [Releases](https://github.com/jun-inoue/phyloBARCODER/releases). Users install phyloBARCODER set up servers as follows:
 - save downloaded html and cgi-bin directories in /var/www/.
 - install R and a package, [ape](https://github.com/emmanuelparadis/ape?tab=readme-ov-file).
