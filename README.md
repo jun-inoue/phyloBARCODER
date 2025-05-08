@@ -1,5 +1,5 @@
 # phyloBARCODER
-phyloBARCODER is a web tool for species identification of metabarcoding DNA sequences by estimating phylogenetic trees.
+A web tool for species identification of metabarcoding DNA sequences by estimating phylogenetic trees. Version 1 stores a database comprising all eukaryotic mitochondrial gene sequences. 
 
 
 ---
@@ -7,7 +7,7 @@ phyloBARCODER is a web tool for species identification of metabarcoding DNA sequ
 ## Analysis site   
 viento - fast   
 [https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder/)      
-(from 19 Oct. 2023)
+(from 19 Oct. 2023)   
 
 osaka   
 [http://133.167.86.72/phylobarcoder/](http://133.167.86.72/phylobarcoder/)   
@@ -15,11 +15,14 @@ osaka
 
 ---
 ## Instruction　　　
-[https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)
+English   
+[https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)   
+Japanese   
+[https://fish-evol.org/phylobarcoder_instruction/indexJPN.html](https://fish-evol.org/phylobarcoder_instruction/indexJPN.html)   
 
 ---
-## Installation　　　
-If users install phyloBARCODER on your own web server, download Source code from [Releases](https://github.com/jun-inoue/phyloBARCODER/releases) and set up the server as follows:
+## Programming code　　　
+The programming code is accessible from [Releases](https://github.com/jun-inoue/phyloBARCODER/releases). Users install phyloBARCODER set up servers as follows:
 - save downloaded html and cgi-bin directories in /var/www/.
 - install R and a package, [ape](https://github.com/emmanuelparadis/ape?tab=readme-ov-file).
 - save dowlonaded dependencies (Rscript, BLASTN, BLASTDBCMD, MAKEBLASTDB, MAFFT, and TRIMAL) in the /cgi-bin/PHYLOBARCODERscripts directory.   
