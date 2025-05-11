@@ -5,11 +5,15 @@ A web tool for species identification of metabarcoding DNA sequences by estimati
 ---
 
 ## Analysis site   
-viento - fast   
+yurai - fast   
+[https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/)   
+(from 11 May 2025)   
+
+viento   
 [https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder/)      
 (from 19 Oct. 2023)   
 
-osaka   
+osaka - slow 
 [http://133.167.86.72/phylobarcoder/](http://133.167.86.72/phylobarcoder/)   
 (from 21 Jan. 2024) 
 
