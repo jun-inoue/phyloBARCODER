@@ -34,6 +34,17 @@ The programming code is accessible from [Releases](https://github.com/jun-inoue/
 Those scripts were confirmed to run on the Linux operating system with an Apache HTTP Server Server.   
 
 ---
+## History
+
+Date | Version | Revision
+--- | --- | ---
+28 Dec. 2024 |  | Version 1.0.6 released. The use of blastdbcmd has been discontinued, and sequences are now retrieved from BLAST hit results.
+4 Jun. 2024 | Version 1.0 | Published in Inoue et al (2024).
+
+<br />
+<br />  
+
+---
 ## Citation
 Inoue J. et al. 
 phyloBARCODER: An web tool for phylogenetic classification of eukaryote metabarcodes using custom reference databases. Molecular Biology and Evolution, in press. [Link](https://academic.oup.com/mbe/advance-article/doi/10.1093/molbev/msae111/7689935?utm_source=advanceaccess&utm_campaign=mbe&utm_medium=email).   
