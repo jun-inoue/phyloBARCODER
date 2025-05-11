@@ -38,7 +38,7 @@ Those scripts were confirmed to run on the Linux operating system with an Apache
 
 Date | Version | Revision
 --- | --- | ---
-11 May 2025 | Version 1.0.6 | The use of blastdbcmd has been discontinued. Sequences are now retrieved from BLAST hit results.
+11 May 2025 | Version 1.0.6 | The use of blastdbcmd has been discontinued, and the option "(4) Primer Region – range: 5'/3' flanking sequence lengths" is no longer available. Sequences are now retrieved from BLAST hit results.
 4 Jun. 2024 | Version 1.0 | Published in Inoue et al (2024).
 
 <br />
