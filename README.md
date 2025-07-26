@@ -1,5 +1,5 @@
 # phyloBARCODER
-*A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation.* Version 1 stores a database comprising all eukaryotic mitochondrial gene sequences. 
+A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. Version 1 stores a database comprising all eukaryotic mitochondrial gene sequences. 
 
 
 ---
