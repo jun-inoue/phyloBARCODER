@@ -9,15 +9,9 @@ yurai - fast
 [https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/)   
 (from 11 May 2025)   
 
-<!-- 
 viento   
 [https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder/)      
 (from 19 Oct. 2023)   
-
-osaka - slow   
-[http://133.167.86.72/phylobarcoder/](http://133.167.86.72/phylobarcoder/)   
-(from 21 Jan. 2024) 
--->
 
 osaka2 - slow     
 [http://49.212.178.185/phylobarcoder/](http://49.212.178.185/phylobarcoder/)   
