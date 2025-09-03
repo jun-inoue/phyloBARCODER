@@ -13,8 +13,8 @@ osaka2 - slow
 [http://49.212.178.185/phylobarcoder/](http://49.212.178.185/phylobarcoder/)   
 (from 27 July 2025)
 
-viento   
-[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder/)      
+viento - medium  
+[[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phyloBARCODER)]      
 (Under construction)   
 
 
