@@ -14,7 +14,7 @@ osaka2 - slow
 (from 27 July 2025)
 
 viento - medium  
-[[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phyloBARCODER)]      
+[[https://orthoscope.jp/phyloBARCODER/](https://orthoscope.jp/phyloBARCODER)]      
 (Under construction)   
 
 
