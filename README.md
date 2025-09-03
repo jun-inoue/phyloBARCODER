@@ -15,7 +15,7 @@ osaka2 - slow
 
 viento - medium  
 [[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder)]      
-(Under construction)   
+(from 3 Sep. 2025. Sequence Extraction is not available)   
 
 
 ---
