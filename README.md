@@ -11,7 +11,7 @@ yurai (CGI) - fast
 
 viento (FLASK)  
 [[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder)]      
-(from 3 Sep. 2025. Sequence Extraction is not available)   
+(from 3 Sep. 2025)   
 
 
 ---
