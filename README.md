@@ -9,11 +9,7 @@ yurai (CGI) - fast
 [https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/)   
 (from 11 May 2025)   
 
-osaka2 (CGI) - slow     
-[http://49.212.178.185/phylobarcoder/](http://49.212.178.185/phylobarcoder/)   
-(from 27 July 2025)
-
-viento (FLASK) - medium  
+viento (FLASK)  
 [[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder)]      
 (from 3 Sep. 2025. Sequence Extraction is not available)   
 
