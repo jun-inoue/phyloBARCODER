@@ -5,6 +5,8 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 ---
 
 ## Analysis site   
+"Due to a scheduled power outage, the system will be suspended from 3:00 PM on September 27, 2025, until noon on September 30."   
+
 yurai (CGI) - fast   
 [https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/)   
 (from 11 May 2025)   
