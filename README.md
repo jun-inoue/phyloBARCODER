@@ -12,7 +12,7 @@ yurai (CGI) - fast
 (from 11 May 2025)   
 
 viento (FLASK)  
-[[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder)]      
+[https://orthoscope.jp/phylobarcoder/](https://orthoscope.jp/phylobarcoder)      
 (from 3 Sep. 2025)   
 
 
