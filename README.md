@@ -8,6 +8,7 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 yurai (CGI) - fast   
 [https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/)   
+The server will be offline Sept 25, 15:00 JST – Sept 28, 12:00 JST due to scheduled campus power maintenance.   
 (from 11 May 2025)   
 
 viento (FLASK)  
