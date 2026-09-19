@@ -5,7 +5,7 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 ---
 
 ## Analysis site   
-The servers will be offline Sept 25, 15:00 JST – Sept 28, 12:00 JST due to scheduled campus power maintenance.   
+The servers will be offline from 15:00 JST on Sept 25 to 12:00 JST on Sept 28 due to scheduled campus power maintenance.   
 
 yurai (CGI) - fast   
 [https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/)   
