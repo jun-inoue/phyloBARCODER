@@ -1,3 +1,14 @@
+## New: Online BLAST species identification
+
+phyloBARCODER now supports online BLAST searches against
+MIDORI2 GB265 LONGEST, covering 15 metazoan mitochondrial genes.
+Paste eDNA or metabarcoding sequences in FASTA format to obtain
+up to three matches per query and download the results as CSV.
+No installation or sign-in is required for BLAST searches.
+
+[Run BLAST](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
+· [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
+
 # phyloBARCODER
 A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. Version 1 stores a database comprising all eukaryotic mitochondrial gene sequences. 
 
