@@ -35,9 +35,9 @@ Japanese
 ---
 ## Source code availability
  
-The source code is not currently distributed through GitHub.
+The source code is not publicly available.
  
-Researchers interested in source code access, local installation, or collaboration are welcome to contact the author. Source code may be provided upon reasonable request.
+Source code may be provided upon reasonable request to the author.
 
 
 ---
