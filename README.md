@@ -5,9 +5,6 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 ---
 
 > **🆕 New feature: Online BLAST species identification lets you identify eDNA sequences using reference database covering 15 metazoan mitochondrial genes.**
-
-Paste sequences in FASTA format to obtain up to three matches per query and download the results as CSV. No installation or sign-in is required for BLAST searches.
-
 [Run BLAST](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
 
 
