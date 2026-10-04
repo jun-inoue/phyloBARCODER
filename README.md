@@ -4,8 +4,8 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ---
 
-> **🆕 New (1 October 2026): Online BLAST searches now also support PR2 v5.1.1 SSU rRNA sequences, mainly eukaryotic 18S, alongside MIDORI2 and MiFish DB.**
-[Run BLAST](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
+> **🆕 New (1 October 2026): Online Tree and BLAST identifications now also support PR2 v5.1.1 SSU rRNA sequences, mainly eukaryotic 18S, alongside MIDORI2 and MiFish DB.**
+[Run Tree identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [Run BLAST](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
 
 
 ## Analysis site   
