@@ -10,11 +10,9 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ## Analysis tools
 
-yurai-CGI has been available since **11 May 2025**; viento-Flask since **3 September 2025**.
-
 | Analysis tool | yurai-CGI | viento-Flask |
 | --- | --- | --- |
-| Tree Identification (Mitochondrial genes) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) | [Open](https://orthoscope.jp/phylobarcoder/) |
+| Tree Identification (Mitochondrial genes) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) · Available since **11 May 2025** | [Open](https://orthoscope.jp/phylobarcoder/) · Available since **3 September 2025** |
 | Sequence Extraction (Mitochondrial genes) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html) | — |
 | Tree Identification (SSU rRNA / PR2) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · Public beta, 4 October 2026 | — |
 | Sequence Extraction (SSU rRNA / PR2) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · Public beta, 4 October 2026 | — |
