@@ -4,8 +4,8 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ---
 
-> **🆕 New (1 October 2026): Online Tree and BLAST identifications now also support PR2 v5.1.1 SSU rRNA sequences, mainly eukaryotic 18S, alongside MIDORI2 and MiFish DB.**
-[Tree Identification (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [Run BLAST](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
+> **🆕 New (4 October 2026): Tree Identification and Sequence Extraction for SSU rRNA (PR2) and plant rbcL are now available as public beta tools. A Florida bee pollen rbcL metabarcoding example is included. Validation results and bug reports are welcome.**
+[SSU rRNA Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [SSU rRNA Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · [rbcL Tree and example](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · [rbcL Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
 
 
 ## Analysis tools
