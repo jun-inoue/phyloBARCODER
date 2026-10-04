@@ -10,17 +10,16 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ## Analysis tools
 
-| Analysis tool | yurai-CGI | viento-Flask |
-| --- | --- | --- |
-| Tree Identification (Mitochondrial genes) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) · Available since **11 May 2025** | [Open](https://orthoscope.jp/phylobarcoder/) · Available since **3 September 2025** |
-| Sequence Extraction (Mitochondrial genes) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html) | — |
-| Tree Identification (SSU rRNA / PR2) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · Public beta, 4 October 2026 | — |
-| Sequence Extraction (SSU rRNA / PR2) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · Public beta, 4 October 2026 | — |
-| Tree Identification (rbcL) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · Public beta, 4 October 2026 | — |
-| Sequence Extraction (rbcL) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · Public beta, 4 October 2026 | — |
-| Tree Identification (ITS1 / ITS2 / UNITE) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) · Public beta, 5 October 2026 | — |
-| Sequence Extraction (ITS1 / ITS2 / UNITE) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) · Public beta, 5 October 2026 | — |
-| BLAST Identification | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) | — |
+| Marker / reference database | yurai-CGI<br>Tree Identification | yurai-CGI<br>Sequence Extraction | viento-Flask<br>Tree Identification |
+| --- | --- | --- | --- |
+| **Mitochondrial genes** | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html)<br>Since 11 May 2025 | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html) | [Tree](https://orthoscope.jp/phylobarcoder/)<br>Since 3 September 2025 |
+| **SSU rRNA / PR2**<br>Public beta · 4 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) | — |
+| **rbcL / Plants**<br>Public beta · 4 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) | — |
+| **ITS1 / ITS2 / UNITE — Fungi**<br>Public beta · 5 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) | — |
+
+ITS1 and ITS2 can be selected on each UNITE page.
+
+**Similarity search:** [BLAST Identification (yurai-CGI)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
 
 
 ---
