@@ -14,17 +14,13 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 [Analysis site](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/) · Available since **11 May 2025**.
 
-- [Tree Identification (Mitochondrial genes)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html)
+- [Tree Identification (Mitochondrial genes)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) · Also available on [viento — Flask](https://orthoscope.jp/phylobarcoder/) (since **3 September 2025**).
 - [Sequence Extraction (Mitochondrial genes)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html)
 - [Tree Identification (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) — public beta, 4 October 2026
 - [Sequence Extraction (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) — public beta, 4 October 2026
 - [Tree Identification (rbcL)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) — public beta, 4 October 2026
 - [Sequence Extraction (rbcL)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) — public beta, 4 October 2026
 - [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
-
-### viento — Flask
-
-[Analysis site](https://orthoscope.jp/phylobarcoder/) · Available since **3 September 2025**.
 
 
 ---
