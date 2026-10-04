@@ -1,11 +1,11 @@
 # phyloBARCODER
-A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. The analysis pages are organized by marker: **Mitochondrial genes** uses MIDORI2 references from metazoans (animals); **SSU rRNA / PR2** uses PR2 references, mainly eukaryotic 18S rRNA. PR2 focuses on protists and also includes animals, fungi and plants. The PR2 tools are available as a public beta; validation results and bug reports are welcome. 
+A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. The analysis pages are organized by marker: **Mitochondrial genes** uses MIDORI2 references from metazoans (animals); **SSU rRNA / PR2** uses PR2 references, mainly eukaryotic 18S rRNA. PR2 focuses on protists and also includes animals, fungi and plants. **rbcL** uses the Bell plant chloroplast reference library; **ITS1 / ITS2 / UNITE** uses fungal ITS references with separate region selection. The PR2, rbcL and ITS tools are available as public beta tools; validation results and bug reports are welcome. 
 
 
 ---
 
-> **🆕 New (4 October 2026): Tree Identification and Sequence Extraction for SSU rRNA (PR2) and plant rbcL are now available as public beta tools. A Florida bee pollen rbcL metabarcoding example is included. Validation results and bug reports are welcome.**
-[SSU rRNA Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [SSU rRNA Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · [rbcL Tree and example](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · [rbcL Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
+> **🆕 New (5 October 2026): Tree Identification and Sequence Extraction for SSU rRNA (PR2), plant rbcL and fungal ITS1/ITS2 (UNITE) are now available as public beta tools. A Florida bee pollen rbcL metabarcoding example is included. Validation results and bug reports are welcome.**
+[SSU rRNA Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [SSU rRNA Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · [rbcL Tree and example](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · [rbcL Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · [ITS Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) · [ITS Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) · [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
 
 
 ## Analysis tools
@@ -18,6 +18,8 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 | Sequence Extraction (SSU rRNA / PR2) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · Public beta, 4 October 2026 | — |
 | Tree Identification (rbcL) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · Public beta, 4 October 2026 | — |
 | Sequence Extraction (rbcL) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · Public beta, 4 October 2026 | — |
+| Tree Identification (ITS1 / ITS2 / UNITE) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) · Public beta, 5 October 2026 | — |
+| Sequence Extraction (ITS1 / ITS2 / UNITE) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) · Public beta, 5 October 2026 | — |
 | BLAST Identification | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) | — |
 
 
