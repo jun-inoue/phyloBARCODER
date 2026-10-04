@@ -1,12 +1,19 @@
 # phyloBARCODER
-A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. Version 1 stores a database comprising all eukaryotic mitochondrial gene sequences. 
+A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. The analysis pages are organized by marker: **Mitochondrial genes** uses MIDORI2 references from metazoans (animals); **SSU rRNA / PR2** uses PR2 references, mainly eukaryotic 18S rRNA. PR2 focuses on protists and also includes animals, fungi and plants. The PR2 tools are available as a public beta; validation results and bug reports are welcome. 
 
 
 ---
 
 > **🆕 New (1 October 2026): Online Tree and BLAST identifications now also support PR2 v5.1.1 SSU rRNA sequences, mainly eukaryotic 18S, alongside MIDORI2 and MiFish DB.**
-[Run Tree identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [Run BLAST](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
+[Tree Identification (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [Run BLAST](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
 
+
+## Analysis tools
+- [Tree Identification (Mitochondrial genes)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html)
+- [Sequence Extraction (Mitochondrial genes)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html)
+- [Tree Identification (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html)
+- [Sequence Extraction (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html)
+- [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
 
 ## Analysis site   
 yurai (CGI) - fast   
