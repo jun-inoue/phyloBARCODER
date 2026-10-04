@@ -10,17 +10,17 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ## Analysis tools
 
-### yurai — CGI
+yurai-CGI has been available since **11 May 2025**; viento-Flask since **3 September 2025**.
 
-[Analysis site](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/) · Available since **11 May 2025**.
-
-- [Tree Identification (Mitochondrial genes)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) · Also available on [viento — Flask](https://orthoscope.jp/phylobarcoder/) (since **3 September 2025**).
-- [Sequence Extraction (Mitochondrial genes)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html)
-- [Tree Identification (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) — public beta, 4 October 2026
-- [Sequence Extraction (SSU rRNA / PR2)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) — public beta, 4 October 2026
-- [Tree Identification (rbcL)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) — public beta, 4 October 2026
-- [Sequence Extraction (rbcL)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) — public beta, 4 October 2026
-- [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
+| Analysis tool | yurai-CGI | viento-Flask |
+| --- | --- | --- |
+| Tree Identification (Mitochondrial genes) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) | [Open](https://orthoscope.jp/phylobarcoder/) |
+| Sequence Extraction (Mitochondrial genes) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html) | — |
+| Tree Identification (SSU rRNA / PR2) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · Public beta, 4 October 2026 | — |
+| Sequence Extraction (SSU rRNA / PR2) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · Public beta, 4 October 2026 | — |
+| Tree Identification (rbcL) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · Public beta, 4 October 2026 | — |
+| Sequence Extraction (rbcL) | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · Public beta, 4 October 2026 | — |
+| BLAST Identification | [Open](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) | — |
 
 
 ---
