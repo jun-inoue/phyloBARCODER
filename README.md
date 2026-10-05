@@ -58,7 +58,6 @@ yurai-CGI and viento-Flask provide mirror access to mitochondrial Tree Identific
   </tbody>
 </table>
 
-On both Fungi pages, select **ITS1**, **ITS2** or **LSU rRNA**. LSU uses **SILVA 138.2 Parc** or **Ref NR99**, with **LSU / Parc as the default**. Both databases retain all biological domains. A published 27-OTU decaying-wood eDNA example is included ([Shirouzu et al. 2020](https://doi.org/10.1038/s41598-020-59620-0), Figs. 2 and 3; Matsuoka 2022, p. 221, Fig. 3). [Compare the Parc and Ref NR99 trees and sequence matches](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/silva_LSU_comparison.html).
 
 
 ---
