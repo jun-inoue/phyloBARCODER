@@ -10,16 +10,55 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ## Analysis tools
 
-| Marker / reference database | yurai-CGI<br>Tree Identification | yurai-CGI<br>Sequence Extraction | viento-Flask<br>Tree Identification |
-| --- | --- | --- | --- |
-| **Mitochondrial genes** | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html)<br>Since 11 May 2025 | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html) | [Tree](https://orthoscope.jp/phylobarcoder/)<br>Since 3 September 2025 |
-| **SSU rRNA / PR2**<br>Public beta · 4 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) | — |
-| **rbcL / Plants**<br>Public beta · 4 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) | — |
-| **Fungi: ITS1 / ITS2 / LSU**<br>UNITE / SILVA<br>Public beta · 5 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) | — |
+yurai-CGI and viento-Flask provide mirror access to mitochondrial Tree Identification. Additional tools currently available on each site are shown below.
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Marker / reference database</th>
+      <th colspan="2">yurai-CGI</th>
+      <th>viento-Flask</th>
+    </tr>
+    <tr>
+      <th>Tree Identification</th>
+      <th>Sequence Extraction</th>
+      <th>Tree Identification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Mitochondrial genes</strong></td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html">Tree</a><br>Since 11 May 2025</td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html">Extraction</a></td>
+      <td><a href="https://orthoscope.jp/phylobarcoder/">Tree</a><br>Since 3 September 2025</td>
+    </tr>
+    <tr>
+      <td><strong>SSU rRNA / PR2</strong><br>Public beta · 4 October 2026</td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html">Tree</a></td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html">Extraction</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>rbcL / Plants</strong><br>Public beta · 4 October 2026</td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html">Tree</a></td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html">Extraction</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>Fungi: ITS1 / ITS2 / LSU</strong><br>UNITE / SILVA<br>Public beta · 5 October 2026</td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html">Tree</a></td>
+      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html">Extraction</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan="2"><strong>Similarity search:</strong> <a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html">BLAST Identification (yurai-CGI)</a></td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
 
 On both Fungi pages, select **ITS1**, **ITS2** or **LSU rRNA**. LSU uses **SILVA 138.2 Parc** or **Ref NR99**, with **LSU / Parc as the default**. Both databases retain all biological domains. A published 27-OTU decaying-wood eDNA example is included ([Shirouzu et al. 2020](https://doi.org/10.1038/s41598-020-59620-0), Figs. 2 and 3; Matsuoka 2022, p. 221, Fig. 3). [Compare the Parc and Ref NR99 trees and sequence matches](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/silva_LSU_comparison.html).
-
-**Similarity search:** [BLAST Identification (yurai-CGI)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
 
 
 ---
