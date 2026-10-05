@@ -1,11 +1,11 @@
 # phyloBARCODER
-A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. The analysis pages are organized by marker: **Mitochondrial genes** uses MIDORI2 references from metazoans (animals); **SSU rRNA / PR2** uses PR2 references, mainly eukaryotic 18S rRNA. PR2 focuses on protists and also includes animals, fungi and plants. **rbcL** uses the Bell plant chloroplast reference library; **ITS1 / ITS2 / UNITE** uses fungal ITS references with separate region selection. The PR2, rbcL and ITS tools are available as public beta tools; validation results and bug reports are welcome. 
+A web tool for species identification of metabarcoding DNA sequences through phylogenetic tree estimation. The analysis pages provide the following marker and reference database options: **Mitochondrial genes** uses MIDORI2 references from metazoans (animals); **SSU rRNA / PR2** uses PR2 references, mainly eukaryotic 18S rRNA. PR2 focuses on protists and also includes animals, fungi and plants. **rbcL** uses the Bell plant chloroplast reference library; **Fungi** supports ITS1 and ITS2 with UNITE references, and LSU rRNA with SILVA references covering eukaryotes, bacteria and archaea. The PR2, rbcL and Fungi tools are available as public beta tools; validation results and bug reports are welcome. 
 
 
 ---
 
-> **🆕 New (5 October 2026): Tree Identification and Sequence Extraction for SSU rRNA (PR2), plant rbcL and fungal ITS1/ITS2 (UNITE) are now available as public beta tools. Validation results and bug reports are welcome.**
-[SSU rRNA Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [SSU rRNA Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · [rbcL Tree and example](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · [rbcL Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · [ITS Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) · [ITS Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) · [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
+> **🆕 New (5 October 2026): Tree Identification and Sequence Extraction for SSU rRNA (PR2), plant rbcL, and fungal ITS1/ITS2 (UNITE) and LSU rRNA (SILVA) are now available as public beta tools. Validation results and bug reports are welcome.**
+[SSU rRNA Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) · [SSU rRNA Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) · [rbcL Tree and example](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) · [rbcL Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) · [Fungi Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) · [Fungi Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) · [BLAST Identification](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html) · [Instructions](https://fish-evol.org/phylobarcoder_instruction/index.html)
 
 
 ## Analysis tools
@@ -15,9 +15,9 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 | **Mitochondrial genes** | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html)<br>Since 11 May 2025 | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html) | [Tree](https://orthoscope.jp/phylobarcoder/)<br>Since 3 September 2025 |
 | **SSU rRNA / PR2**<br>Public beta · 4 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html) | — |
 | **rbcL / Plants**<br>Public beta · 4 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html) | — |
-| **ITS1 / ITS2 / UNITE — Fungi**<br>Public beta · 5 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) | — |
+| **Fungi: ITS1 / ITS2 / LSU**<br>UNITE / SILVA<br>Public beta · 5 October 2026 | [Tree](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) | [Extraction](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html) | — |
 
-ITS1 and ITS2 can be selected on each UNITE page.
+On both Fungi pages, select **ITS1**, **ITS2** or **LSU rRNA**. LSU uses **SILVA 138.2 Parc** or **Ref NR99**, with **LSU / Parc as the default**. Both databases retain all biological domains. A published 27-OTU decaying-wood eDNA example is included ([Shirouzu et al. 2020](https://doi.org/10.1038/s41598-020-59620-0), Figs. 2 and 3; Matsuoka 2022, p. 221, Fig. 3). [Compare the Parc and Ref NR99 trees and sequence matches](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/silva_LSU_comparison.html).
 
 **Similarity search:** [BLAST Identification (yurai-CGI)](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
 
