@@ -18,10 +18,6 @@ Choose one of four reference database options to identify your sequences with a 
 
 Reference libraries: **MIDORI2** (animal mitochondrial genes), **PR2 / SILVA** (SSU rRNA), **Bell** (plant rbcL), and **UNITE / SILVA** (ITS / LSU). SSU rRNA also supports bacteria and archaea; SILVA LSU references cover eukaryotes, bacteria and archaea. SSU rRNA, rbcL and Fungi tools are public beta.
 
-Both servers provide Tree Identification for the four reference database options above.
-
-**Sequence Extraction** is a supporting tool for retrieving reference sequences: [Animal mitochondrial genes](https://orthoscope.jp/phylobarcoder/index_seqExtraction.html) · [SSU rRNA](https://orthoscope.jp/phylobarcoder/index_seqExtraction_protists.html) · [rbcL](https://orthoscope.jp/phylobarcoder/index_seqExtraction_rbcl.html) · [ITS/LSU](https://orthoscope.jp/phylobarcoder/index_seqExtraction_unite.html).
-
 **BLAST Identification:** [viento](https://orthoscope.jp/phylobarcoder/index_blast.html) · [yurai](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html).
 
 Mitochondrial Tree Identification: yurai since **11 May 2025**, viento since **3 September 2025**. Public beta: SSU rRNA / PR2 and rbcL since **4 October 2026**; Fungi (UNITE / SILVA) since **5 October 2026**.
