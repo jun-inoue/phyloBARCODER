@@ -12,46 +12,18 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 yurai-CGI and viento-Flask provide mirror access to the tools below. The additional viento tools became available on **5 October 2026**; mitochondrial Tree Identification has been available there since **3 September 2025**.
 
 <table>
-  <thead>
-    <tr><th rowspan="2">Marker / reference database</th><th colspan="2">viento-Flask</th><th colspan="2">yurai-CGI</th></tr>
-    <tr><th>Tree Identification</th><th>Sequence Extraction</th><th>Tree Identification</th><th>Sequence Extraction</th></tr>
-  </thead>
+  <thead><tr><th>Server / analysis</th><th>Animals:<br>mt 15 genes</th><th>Eukaryotes:<br>SSU rRNA<br><small>also Bacteria / Archaea</small></th><th>Plants:<br>rbcL</th><th>Fungi:<br>ITS1 / ITS2 / LSU</th></tr></thead>
   <tbody>
-    <tr>
-      <td><strong>Mitochondrial genes</strong></td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index.html">Tree</a><br>Since 3 September 2025</td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction.html">Extraction</a></td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html">Tree</a><br>Since 11 May 2025</td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html">Extraction</a></td>
-    </tr>
-    <tr>
-      <td><strong>SSU rRNA / PR2, SILVA</strong><br>Public beta · 4 October 2026</td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index_tree_protists.html">Tree</a></td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_protists.html">Extraction</a></td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html">Tree</a></td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html">Extraction</a></td>
-    </tr>
-    <tr>
-      <td><strong>rbcL / Plants</strong><br>Public beta · 4 October 2026</td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index_tree_rbcl.html">Tree</a></td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_rbcl.html">Extraction</a></td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html">Tree</a></td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html">Extraction</a></td>
-    </tr>
-    <tr>
-      <td><strong>Fungi: ITS1 / ITS2 / LSU<br>UNITE / SILVA</strong><br>Public beta · 5 October 2026</td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index_tree_unite.html">Tree</a></td>
-      <td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_unite.html">Extraction</a></td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html">Tree</a></td>
-      <td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html">Extraction</a></td>
-    </tr>
-    <tr>
-      <td>Similarity search</td>
-      <td colspan="2"><a href="https://orthoscope.jp/phylobarcoder/index_blast.html">BLAST Identification</a></td>
-      <td colspan="2"><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html">BLAST Identification</a></td>
-    </tr>
+    <tr><th>viento-Flask<br>Tree Identification</th><td><a href="https://orthoscope.jp/phylobarcoder/index.html">Tree</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_tree_protists.html">Tree</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_tree_rbcl.html">Tree</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_tree_unite.html">Tree</a></td></tr>
+    <tr><th>viento-Flask<br>Sequence Extraction</th><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction.html">Sequence</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_protists.html">Sequence</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_rbcl.html">Sequence</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_unite.html">Sequence</a></td></tr>
+    <tr><th>yurai-CGI<br>Tree Identification</th><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html">Tree</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html">Tree</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html">Tree</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html">Tree</a></td></tr>
+    <tr><th>yurai-CGI<br>Sequence Extraction</th><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html">Sequence</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html">Sequence</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html">Sequence</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html">Sequence</a></td></tr>
   </tbody>
 </table>
+
+**BLAST Identification:** [viento-Flask](https://orthoscope.jp/phylobarcoder/index_blast.html) · [yurai-CGI](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
+
+Mitochondrial Tree Identification: yurai since **11 May 2025**, viento since **3 September 2025**. Public beta: SSU rRNA / PR2 and rbcL since **4 October 2026**; Fungi (UNITE / SILVA) since **5 October 2026**.
 
 
 
