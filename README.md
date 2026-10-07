@@ -9,22 +9,22 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ## Analysis tools
 
-yurai-CGI and viento-Flask provide mirror access to the tools below. The additional viento tools became available on **5 October 2026**; mitochondrial Tree Identification has been available there since **3 September 2025**.
+Choose one of four reference database options to identify your sequences with a phylogenetic tree.
 
-<table>
-  <thead><tr><th>Server / analysis</th><th>Animals:<br>mt 15 genes</th><th>Eukaryotes:<br>SSU rRNA<br><small>also Bacteria / Archaea</small></th><th>Plants:<br>rbcL</th><th>Fungi:<br>ITS1 / ITS2 / LSU</th></tr></thead>
-  <tbody>
-    <tr><th>viento-Flask<br>Tree Identification</th><td><a href="https://orthoscope.jp/phylobarcoder/index.html">Tree</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_tree_protists.html">Tree</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_tree_rbcl.html">Tree</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_tree_unite.html">Tree</a></td></tr>
-    <tr><th>viento-Flask<br>Sequence Extraction</th><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction.html">Sequence</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_protists.html">Sequence</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_rbcl.html">Sequence</a></td><td><a href="https://orthoscope.jp/phylobarcoder/index_seqExtraction_unite.html">Sequence</a></td></tr>
-    <tr><th>yurai-CGI<br>Tree Identification</th><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html">Tree</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html">Tree</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html">Tree</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html">Tree</a></td></tr>
-    <tr><th>yurai-CGI<br>Sequence Extraction</th><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction.html">Sequence</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_protists.html">Sequence</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_rbcl.html">Sequence</a></td><td><a href="https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_seqExtraction_unite.html">Sequence</a></td></tr>
-  </tbody>
-</table>
+| Server | Animals | Eukaryotes | Plants | Fungi |
+| --- | --- | --- | --- | --- |
+| **viento-Flask** | [mitochondrial genes](https://orthoscope.jp/phylobarcoder/index.html) | [SSU rRNA](https://orthoscope.jp/phylobarcoder/index_tree_protists.html) | [rbcL](https://orthoscope.jp/phylobarcoder/index_tree_rbcl.html) | [ITS/LSU](https://orthoscope.jp/phylobarcoder/index_tree_unite.html) |
+| **yurai-CGI** | [mitochondrial genes](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) | [SSU rRNA](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) | [rbcL](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) | [ITS/LSU](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) |
 
-**BLAST Identification:** [viento-Flask](https://orthoscope.jp/phylobarcoder/index_blast.html) · [yurai-CGI](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html)
+Reference libraries: **MIDORI2** (animal mitochondrial genes), **PR2 / SILVA** (SSU rRNA), **Bell** (plant rbcL), and **UNITE / SILVA** (ITS / LSU). SSU rRNA also supports bacteria and archaea; SILVA LSU references cover eukaryotes, bacteria and archaea. SSU rRNA, rbcL and Fungi tools are public beta.
+
+Both servers provide Tree Identification for the four reference database options above.
+
+**Sequence Extraction** is a supporting tool for retrieving reference sequences: [Animal mitochondrial genes](https://orthoscope.jp/phylobarcoder/index_seqExtraction.html) · [SSU rRNA](https://orthoscope.jp/phylobarcoder/index_seqExtraction_protists.html) · [rbcL](https://orthoscope.jp/phylobarcoder/index_seqExtraction_rbcl.html) · [ITS/LSU](https://orthoscope.jp/phylobarcoder/index_seqExtraction_unite.html).
+
+**BLAST Identification:** [viento](https://orthoscope.jp/phylobarcoder/index_blast.html) · [yurai](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html).
 
 Mitochondrial Tree Identification: yurai since **11 May 2025**, viento since **3 September 2025**. Public beta: SSU rRNA / PR2 and rbcL since **4 October 2026**; Fungi (UNITE / SILVA) since **5 October 2026**.
-
 
 
 ---
