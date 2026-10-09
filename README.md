@@ -11,7 +11,7 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 Choose one of four reference database options to identify your sequences with a phylogenetic tree.
 
-| Server | Animals | Eukaryotes | Plants | Fungi |
+| Server | Animals | Three Domains | Plants | Fungi |
 | --- | --- | --- | --- | --- |
 | **viento-Flask** | [mitochondrial genes](https://orthoscope.jp/phylobarcoder/index.html) | [SSU rRNA](https://orthoscope.jp/phylobarcoder/index_tree_protists.html) | [rbcL](https://orthoscope.jp/phylobarcoder/index_tree_rbcl.html) | [ITS/LSU](https://orthoscope.jp/phylobarcoder/index_tree_unite.html) |
 | **yurai-CGI** | [mitochondrial genes](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) | [SSU rRNA](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) | [rbcL](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) | [ITS/LSU](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) |
@@ -25,10 +25,10 @@ Mitochondrial Tree Identification: yurai since **11 May 2025**, viento since **3
 
 ---
 ## Instruction　　　
-English   
-[https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)   
-Japanese   
-[https://fish-evol.org/phylobarcoder_instruction/indexJPN.html](https://fish-evol.org/phylobarcoder_instruction/indexJPN.html)   
+English   
+[https://fish-evol.org/phylobarcoder_instruction](https://fish-evol.org/phylobarcoder_instruction)   
+Japanese   
+[https://fish-evol.org/phylobarcoder_instruction/indexJPN.html](https://fish-evol.org/phylobarcoder_instruction/indexJPN.html)   
 
 ---
 ## Source code availability
@@ -40,10 +40,10 @@ Source code may be provided upon reasonable request to the author.
 
 ---
 ## Citation
-Inoue J. et al. 
-phyloBARCODER: An web tool for phylogenetic classification of eukaryote metabarcodes using custom reference databases. Molecular Biology and Evolution, in press. [Link](https://academic.oup.com/mbe/advance-article/doi/10.1093/molbev/msae111/7689935?utm_source=advanceaccess&utm_campaign=mbe&utm_medium=email).   
+Inoue J. et al. 
+phyloBARCODER: An web tool for phylogenetic classification of eukaryote metabarcodes using custom reference databases. Molecular Biology and Evolution, in press. [Link](https://academic.oup.com/mbe/advance-article/doi/10.1093/molbev/msae111/7689935?utm_source=advanceaccess&utm_campaign=mbe&utm_medium=email).   
 
 ---
-## Contact 
+## Contact 
 Email: [_jinoueATg.ecc.u-tokyo.ac.jp_](http://www.fish-evol.org/index_eng.html)
-<br />  
+<br />  
