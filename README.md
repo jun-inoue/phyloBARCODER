@@ -4,7 +4,7 @@ A web tool for species identification of metabarcoding DNA sequences through phy
 
 ---
 
-> **🆕 New (5 October 2026): All Tree Identification, Sequence Extraction and BLAST Identification tools are now available on both [yurai-CGI](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/) and [viento-Flask](https://orthoscope.jp/phylobarcoder/). SSU rRNA (PR2 / SILVA), rbcL and Fungi tools remain public beta; validation results and bug reports are welcome.**
+> **🆕 New (5 October 2026): All Tree Identification, Sequence Extraction and BLAST Identification tools are now available on both [yurai-CGI](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/) and [viento-Flask](http://157.82.133.212/phylobarcoder/). SSU rRNA (PR2 / SILVA), rbcL and Fungi tools remain public beta; validation results and bug reports are welcome.**
 
 
 ## Analysis tools
@@ -13,10 +13,10 @@ Choose one of four reference database options to identify your sequences with a 
 
 | Server | Animals | Three Domains | Plants | Fungi |
 | --- | --- | --- | --- | --- |
-| **viento-Flask** | [mitochondrial genes](https://orthoscope.jp/phylobarcoder/index.html) | [SSU rRNA](https://orthoscope.jp/phylobarcoder/index_tree_protists.html) | [rbcL](https://orthoscope.jp/phylobarcoder/index_tree_rbcl.html) | [ITS/LSU](https://orthoscope.jp/phylobarcoder/index_tree_unite.html) |
+| **viento-Flask** | [mitochondrial genes](http://157.82.133.212/phylobarcoder/index.html) | [SSU rRNA](http://157.82.133.212/phylobarcoder/index_tree_protists.html) | [rbcL](http://157.82.133.212/phylobarcoder/index_tree_rbcl.html) | [ITS/LSU](http://157.82.133.212/phylobarcoder/index_tree_unite.html) |
 | **yurai-CGI** | [mitochondrial genes](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index.html) | [SSU rRNA](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_protists.html) | [rbcL](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_rbcl.html) | [ITS/LSU](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_tree_unite.html) |
 
-**BLAST Identification:** [viento](https://orthoscope.jp/phylobarcoder/index_blast.html) · [yurai](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html).
+**BLAST Identification:** [viento](http://157.82.133.212/phylobarcoder/index_blast.html) · [yurai](https://yurai.aori.u-tokyo.ac.jp/phylobarcoder/index_blast.html).
 
 Reference libraries: **MIDORI2** (animal mitochondrial genes), **PR2 / SILVA** (SSU rRNA), **Bell** (plant rbcL), and **UNITE / SILVA** (ITS / LSU). SSU rRNA also supports bacteria and archaea; SILVA LSU references cover eukaryotes, bacteria and archaea. SSU rRNA, rbcL and Fungi tools are public beta.
 
